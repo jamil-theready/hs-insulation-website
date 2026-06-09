@@ -16,7 +16,7 @@ export const authors: Author[] = [
     name: "Heradio Hernandez",
     role: "Owner & Lead Installer",
     avatar: "/images/team/heradio-avatar.svg",
-    bio: `Heradio is the owner and lead installer at ${site.brand}. He founded the company in ${site.since} to bring honest, professional insulation work to ${site.region} homeowners — the kind of straight answers and clean job sites he'd want for his own family. He works hands-on in attics and crawl spaces across the valley and foothills, and he writes here to help homeowners understand what their homes actually need. Heradio serves both English- and Spanish-speaking families.`,
+    bio: `Heradio is the owner and lead installer at ${site.brand}. He founded the company in ${site.since} to bring honest, professional insulation work to ${site.region} homeowners, the kind of straight answers and clean job sites he'd want for his own family. He works hands-on in attics and crawl spaces across the valley and foothills, and he writes here to help homeowners understand what their homes actually need. Heradio serves both English- and Spanish-speaking families.`,
     credentials: [
       `Owner-operator since ${site.since}`,
       "Spray foam, blown-in, batt & removal specialist",

@@ -8,9 +8,9 @@ import { ArrowRight } from "@/components/ui";
 import { getAllPostsMeta, formatDate } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Blog — Insulation Tips for NorCal Homeowners",
+  title: "Blog, Insulation Tips for NorCal Homeowners",
   description:
-    "Practical insulation advice for Northern California homeowners — energy savings, attic upgrades, spray foam, and knowing when it's time for new insulation.",
+    "Practical insulation advice for Northern California homeowners, energy savings, attic upgrades, spray foam, and knowing when it's time for new insulation.",
   alternates: { canonical: "/blog" },
 };
 

@@ -8,7 +8,7 @@ import { faqs } from "@/lib/faqs";
 import { faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "FAQ — Insulation Questions Answered",
+  title: "FAQ, Insulation Questions Answered",
   description:
     "Answers to common insulation questions: cost, types, removal, timelines, and service areas. H&S Insulation serving Yuba City and Northern California.",
   alternates: { canonical: "/faq" },
@@ -21,7 +21,7 @@ export default function FAQPage() {
       <PageHero
         eyebrow="Questions"
         title="Insulation questions, answered"
-        subtitle="Everything homeowners ask us most — and if you don't see your question, just call. We're happy to help."
+        subtitle="Everything homeowners ask us most, and if you don't see your question, just call. We're happy to help."
         breadcrumbs={[{ name: "Home", href: "/" }, { name: "FAQ", href: "/faq" }]}
       />
 

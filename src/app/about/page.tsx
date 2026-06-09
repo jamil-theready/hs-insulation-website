@@ -9,16 +9,16 @@ import { site } from "@/lib/site";
 import { media } from "@/lib/media";
 
 export const metadata: Metadata = {
-  title: "About — Locally Owned NorCal Insulation",
+  title: "About, Locally Owned NorCal Insulation",
   description:
     "H&S Insulation is a locally owned insulation contractor based in Yuba City, serving Northern California since 2020 with honest, clean, professional work in English and Spanish.",
   alternates: { canonical: "/about" },
 };
 
 const values = [
-  { title: "Honest work", text: "We recommend what your home actually needs — not the most expensive option. If a top-up will do, we'll tell you." },
+  { title: "Honest work", text: "We recommend what your home actually needs, not the most expensive option. If a top-up will do, we'll tell you." },
   { title: "Clean job sites", text: "We mask off your living space, control the dust, and haul away every scrap. You won't know we were there, except for the comfort." },
-  { title: "Real expertise", text: "Spray foam, blown-in, batt, and removal — we know which product belongs where, and we install it the right way." },
+  { title: "Real expertise", text: "Spray foam, blown-in, batt, and removal, we know which product belongs where, and we install it the right way." },
   { title: "Bilingual service", text: "We proudly serve both English- and Spanish-speaking families, start to finish. Sí, hablamos español." },
 ];
 
@@ -45,7 +45,7 @@ export default function AboutPage() {
                   H&amp;S Insulation started with a simple idea: most homeowners don&apos;t get straight answers about their insulation. They get upsold, rushed, or left with a mess.
                 </p>
                 <p>
-                  We do it differently. We go up in the attic, show you the real problem, and explain your options in plain language. Then we do clean, professional work that actually keeps your home comfortable — through hot valley summers and cold foothill winters alike.
+                  We do it differently. We go up in the attic, show you the real problem, and explain your options in plain language. Then we do clean, professional work that actually keeps your home comfortable, through hot valley summers and cold foothill winters alike.
                 </p>
                 <p>
                   Owned and operated by {site.owner}, we serve homeowners across {site.region} with the kind of service we&apos;d want for our own families.

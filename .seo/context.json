@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "lastUpdated": "2026-06-09T00:00:00.000Z",
+  "windowDays": 28,
+  "seedReason": "Initial seed at site build 2026-06-09. Insulation clusters for NorCal corridor (Yuba City to Tahoe). Overwritten by weekly GSC refresh once indexed.",
+  "decliningPosts": [],
+  "opportunityQueries": [
+    { "query": "spray foam insulation yuba city", "impressions": 0, "clicks": 0, "position": 99, "nearMiss": false, "note": "Primary commercial query, home base." },
+    { "query": "attic insulation cost northern california", "impressions": 0, "clicks": 0, "position": 99, "nearMiss": false, "note": "High-intent cost query, AEO snippet target." },
+    { "query": "blown in insulation marysville", "impressions": 0, "clicks": 0, "position": 99, "nearMiss": false, "note": "Adjacent city, older housing stock." },
+    { "query": "insulation removal sacramento valley", "impressions": 0, "clicks": 0, "position": 99, "nearMiss": false, "note": "Removal subtype, distinct intent." },
+    { "query": "best insulation for hot climate california", "impressions": 0, "clicks": 0, "position": 99, "nearMiss": false, "note": "Informational, valley-heat angle." },
+    { "query": "spray foam vs blown in insulation", "impressions": 0, "clicks": 0, "position": 99, "nearMiss": false, "note": "Comparison query, featured-snippet target." },
+    { "query": "insulation contractor near me bilingual", "impressions": 0, "clicks": 0, "position": 99, "nearMiss": false, "note": "Spanish-speaking market differentiator." }
+  ],
+  "clusterCoverage": {
+    "sprayFoam": { "postCount": 0, "needsMore": true, "note": "Top performer service, needs spoke posts." },
+    "blownIn": { "postCount": 0, "needsMore": true },
+    "batt": { "postCount": 0, "needsMore": false },
+    "removal": { "postCount": 1, "needsMore": false },
+    "cost": { "postCount": 1, "needsMore": true, "note": "High-intent commercial cluster." },
+    "comfort": { "postCount": 1, "needsMore": false },
+    "energy": { "postCount": 0, "needsMore": false }
+  },
+  "strategicPriorities": [
+    {
+      "cluster": "sprayFoam",
+      "reason": "Highest-margin service and top performer for air sealing. Build topical authority.",
+      "currentPostCount": 0,
+      "targetPostsThisMonth": 2,
+      "spokeSeeds": [
+        "spray foam insulation yuba city",
+        "open cell vs closed cell spray foam",
+        "is spray foam insulation worth it california",
+        "spray foam attic insulation cost"
+      ]
+    },
+    {
+      "cluster": "cost",
+      "reason": "High commercial intent. Cost transparency wins trust and AEO citations.",
+      "currentPostCount": 1,
+      "targetPostsThisMonth": 1,
+      "spokeSeeds": [
+        "how much does spray foam insulation cost",
+        "attic insulation cost calculator california",
+        "is new insulation tax deductible california"
+      ]
+    }
+  ],
+  "topPerformers": [],
+  "deadPages": [],
+  "totals": { "impressionsLast28d": 0, "clicksLast28d": 0, "pagesIndexed": 0, "deadPageCount": 0, "note": "Seed file. Real numbers populated after indexing + weekly GSC run." },
+  "manualOverrides": {
+    "doNotRefresh": [],
+    "doNotWriteAbout": [],
+    "forceClusterPriority": ["sprayFoam"],
+    "cannibalizationConsolidations": []
+  },
+  "history": [
+    { "date": "2026-06-09", "totals": { "impressions": 0, "clicks": 0 }, "note": "System memory initialized at site build. Spray foam + cost clusters prioritized." }
+  ]
+}

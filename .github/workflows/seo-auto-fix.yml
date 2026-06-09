@@ -1,0 +1,56 @@
+name: SEO Auto-Fix
+
+on:
+  schedule:
+    # Monday 7:00 AM PT
+    - cron: "0 14 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  auto-fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run SEO auto-fix
+        run: node scripts/seo-auto-fix/index.mjs
+        env:
+          CI: "true"
+
+      - name: Commit changes
+        id: commit
+        run: |
+          git config user.name "seo-robot[bot]"
+          git config user.email "seo-robot@thereadyconsult.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes to commit"
+          else
+            git commit -m "chore(seo): weekly auto-fix $(date -u +%Y-%m-%d)"
+            git push
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Open summary issue
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          WEEK=$(date -u +%Y-%m-%d)
+          REPORT="reports/seo-fixes/${WEEK}.md"
+          if [ -f "$REPORT" ]; then
+            gh issue create \
+              --title "SEO Auto-Fix Report — Week of ${WEEK}" \
+              --body-file "$REPORT"
+          fi

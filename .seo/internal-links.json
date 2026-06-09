@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-09T20:49:12.231Z",
+  "totalEntries": 14,
+  "totalServices": 4,
+  "totalAreas": 7,
+  "totalBlogPosts": 3,
+  "byCluster": {
+    "sprayFoam": [
+      {
+        "slug": "spray-foam-insulation",
+        "title": "Spray Foam Insulation",
+        "url": "/services/spray-foam-insulation/",
+        "type": "service"
+      },
+      {
+        "slug": "spray-foam-vs-blown-in-vs-batt",
+        "title": "Spray Foam vs. Blown-In vs. Batt: Which Insulation Is Right for Your Home?",
+        "url": "/blog/spray-foam-vs-blown-in-vs-batt/",
+        "type": "blog"
+      }
+    ],
+    "blownIn": [
+      {
+        "slug": "blown-in-insulation",
+        "title": "Blown-In Insulation",
+        "url": "/services/blown-in-insulation/",
+        "type": "service"
+      }
+    ],
+    "batt": [
+      {
+        "slug": "batt-insulation",
+        "title": "Batt Insulation",
+        "url": "/services/batt-insulation/",
+        "type": "service"
+      }
+    ],
+    "removal": [
+      {
+        "slug": "insulation-removal",
+        "title": "Old Insulation Removal",
+        "url": "/services/insulation-removal/",
+        "type": "service"
+      }
+    ],
+    "general": [
+      {
+        "slug": "yuba-city",
+        "title": "Insulation in Yuba City",
+        "url": "/service-areas/yuba-city/",
+        "type": "area"
+      },
+      {
+        "slug": "marysville",
+        "title": "Insulation in Marysville",
+        "url": "/service-areas/marysville/",
+        "type": "area"
+      },
+      {
+        "slug": "sutter-county",
+        "title": "Insulation in Sutter County",
+        "url": "/service-areas/sutter-county/",
+        "type": "area"
+      },
+      {
+        "slug": "grass-valley",
+        "title": "Insulation in Grass Valley",
+        "url": "/service-areas/grass-valley/",
+        "type": "area"
+      },
+      {
+        "slug": "auburn",
+        "title": "Insulation in Auburn",
+        "url": "/service-areas/auburn/",
+        "type": "area"
+      },
+      {
+        "slug": "truckee",
+        "title": "Insulation in Truckee",
+        "url": "/service-areas/truckee/",
+        "type": "area"
+      },
+      {
+        "slug": "lake-tahoe",
+        "title": "Insulation in Lake Tahoe",
+        "url": "/service-areas/lake-tahoe/",
+        "type": "area"
+      }
+    ],
+    "cost": [
+      {
+        "slug": "attic-insulation-cost-northern-california",
+        "title": "How Much Does Attic Insulation Cost in Northern California? (2026)",
+        "url": "/blog/attic-insulation-cost-northern-california/",
+        "type": "blog"
+      }
+    ],
+    "comfort": [
+      {
+        "slug": "signs-your-home-needs-new-insulation",
+        "title": "7 Signs Your NorCal Home Needs New Insulation",
+        "url": "/blog/signs-your-home-needs-new-insulation/",
+        "type": "blog"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "slug": "spray-foam-insulation",
+      "title": "Spray Foam Insulation",
+      "url": "/services/spray-foam-insulation/",
+      "type": "service",
+      "cluster": "sprayFoam"
+    },
+    {
+      "slug": "blown-in-insulation",
+      "title": "Blown-In Insulation",
+      "url": "/services/blown-in-insulation/",
+      "type": "service",
+      "cluster": "blownIn"
+    },
+    {
+      "slug": "batt-insulation",
+      "title": "Batt Insulation",
+      "url": "/services/batt-insulation/",
+      "type": "service",
+      "cluster": "batt"
+    },
+    {
+      "slug": "insulation-removal",
+      "title": "Old Insulation Removal",
+      "url": "/services/insulation-removal/",
+      "type": "service",
+      "cluster": "removal"
+    },
+    {
+      "slug": "yuba-city",
+      "title": "Insulation in Yuba City",
+      "url": "/service-areas/yuba-city/",
+      "type": "area",
+      "cluster": "general"
+    },
+    {
+      "slug": "marysville",
+      "title": "Insulation in Marysville",
+      "url": "/service-areas/marysville/",
+      "type": "area",
+      "cluster": "general"
+    },
+    {
+      "slug": "sutter-county",
+      "title": "Insulation in Sutter County",
+      "url": "/service-areas/sutter-county/",
+      "type": "area",
+      "cluster": "general"
+    },
+    {
+      "slug": "grass-valley",
+      "title": "Insulation in Grass Valley",
+      "url": "/service-areas/grass-valley/",
+      "type": "area",
+      "cluster": "general"
+    },
+    {
+      "slug": "auburn",
+      "title": "Insulation in Auburn",
+      "url": "/service-areas/auburn/",
+      "type": "area",
+      "cluster": "general"
+    },
+    {
+      "slug": "truckee",
+      "title": "Insulation in Truckee",
+      "url": "/service-areas/truckee/",
+      "type": "area",
+      "cluster": "general"
+    },
+    {
+      "slug": "lake-tahoe",
+      "title": "Insulation in Lake Tahoe",
+      "url": "/service-areas/lake-tahoe/",
+      "type": "area",
+      "cluster": "general"
+    },
+    {
+      "type": "blog",
+      "slug": "attic-insulation-cost-northern-california",
+      "title": "How Much Does Attic Insulation Cost in Northern California? (2026)",
+      "url": "/blog/attic-insulation-cost-northern-california/",
+      "cluster": "cost"
+    },
+    {
+      "type": "blog",
+      "slug": "signs-your-home-needs-new-insulation",
+      "title": "7 Signs Your NorCal Home Needs New Insulation",
+      "url": "/blog/signs-your-home-needs-new-insulation/",
+      "cluster": "comfort"
+    },
+    {
+      "type": "blog",
+      "slug": "spray-foam-vs-blown-in-vs-batt",
+      "title": "Spray Foam vs. Blown-In vs. Batt: Which Insulation Is Right for Your Home?",
+      "url": "/blog/spray-foam-vs-blown-in-vs-batt/",
+      "cluster": "sprayFoam"
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import type { FAQ } from "@/components/FAQAccordion";
 export const faqs: FAQ[] = [
   {
     q: "How much does insulation cost?",
-    a: "It depends on the size of the space, the type of insulation, and whether old material needs to be removed first. That's why we give free, itemized estimates with no pressure — so you know exactly what you're paying for before any work starts.",
+    a: "It depends on the size of the space, the type of insulation, and whether old material needs to be removed first. That's why we give free, itemized estimates with no pressure, so you know exactly what you're paying for before any work starts.",
   },
   {
     q: "How do I know if I need new insulation?",
@@ -11,15 +11,15 @@ export const faqs: FAQ[] = [
   },
   {
     q: "What type of insulation is best for my home?",
-    a: "There's no single best — it depends on the space. Spray foam is the top performer for air sealing, blown-in is ideal and cost-effective for attics, and batt works well in open walls and new construction. We recommend the right product for each part of your home, never an upsell.",
+    a: "There's no single best, it depends on the space. Spray foam is the top performer for air sealing, blown-in is ideal and cost-effective for attics, and batt works well in open walls and new construction. We recommend the right product for each part of your home, never an upsell.",
   },
   {
     q: "Do you remove old insulation?",
-    a: "Yes. We fully vacuum out old, damaged, or pest-contaminated insulation and haul it away before installing new material. Adding fresh insulation on top of contaminated old material just seals the problem in — so we start with a clean slate.",
+    a: "Yes. We fully vacuum out old, damaged, or pest-contaminated insulation and haul it away before installing new material. Adding fresh insulation on top of contaminated old material just seals the problem in, so we start with a clean slate.",
   },
   {
     q: "Do you speak Spanish?",
-    a: "Yes — we proudly serve both English- and Spanish-speaking families and will walk you through everything in the language you're most comfortable with. Sí, hablamos español.",
+    a: "Yes, we proudly serve both English- and Spanish-speaking families and will walk you through everything in the language you're most comfortable with. Sí, hablamos español.",
   },
   {
     q: "What areas do you serve?",

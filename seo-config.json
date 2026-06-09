@@ -1,0 +1,31 @@
+{
+  "client": "H&S Insulation",
+  "business": {
+    "name": "H&S Insulation",
+    "telephone": "+19169122080",
+    "siteUrl": "https://hernandezinsulation.com",
+    "image": "https://hernandezinsulation.com/images/og/og-image.png",
+    "serviceType": "Insulation Contractor",
+    "schemaTypes": ["HVACBusiness", "LocalBusiness"],
+    "defaultDescription": "Locally owned insulation contractor serving Northern California since 2020. Spray foam, blown-in, batt insulation, and old insulation removal. Bilingual English and Spanish.",
+    "address": {
+      "locality": "Yuba City",
+      "region": "CA",
+      "country": "US"
+    },
+    "containedInPlace": "Sutter County, California"
+  },
+  "paths": {
+    "schemaLib": "src/lib/schema.ts",
+    "serviceAreaTemplate": "src/app/service-areas/[slug]/page.tsx"
+  },
+  "pagesToAudit": [
+    "src/app/page.tsx",
+    "src/app/layout.tsx",
+    "src/app/service-areas/[slug]/page.tsx",
+    "src/app/blog/[slug]/page.tsx",
+    "src/app/services/[slug]/page.tsx",
+    "src/app/services/page.tsx",
+    "src/app/about/page.tsx"
+  ]
+}

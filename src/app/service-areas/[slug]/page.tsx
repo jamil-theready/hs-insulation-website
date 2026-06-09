@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 import JsonLd from "@/components/JsonLd";
 import { ArrowRight } from "@/components/ui";
 import { serviceAreas, areaBySlug, services, site } from "@/lib/site";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, serviceAreaSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
   return serviceAreas.map((a) => ({ slug: a.slug }));
@@ -32,11 +32,14 @@ export default async function AreaDetail({ params }: { params: Promise<{ slug: s
   return (
     <>
       <JsonLd
-        data={breadcrumbSchema([
-          { name: "Home", url: site.url },
-          { name: "Service Areas", url: `${site.url}/service-areas` },
-          { name: a.city, url: `${site.url}/service-areas/${a.slug}` },
-        ])}
+        data={[
+          serviceAreaSchema(a),
+          breadcrumbSchema([
+            { name: "Home", url: site.url },
+            { name: "Service Areas", url: `${site.url}/service-areas` },
+            { name: a.city, url: `${site.url}/service-areas/${a.slug}` },
+          ]),
+        ]}
       />
       <PageHero
         eyebrow={a.county ? `${a.county}` : "Service area"}

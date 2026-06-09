@@ -50,6 +50,19 @@ export function serviceSchema(serviceName: string, description: string, slug: st
   };
 }
 
+export function serviceAreaSchema(area: { slug: string; city: string; county?: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `Insulation in ${area.city}, ${site.state}`,
+    description: `Spray foam, blown-in, batt insulation and old insulation removal in ${area.city}${area.county ? `, ${area.county}` : ""}. Serving ${area.city} and the surrounding ${site.region} area.`,
+    serviceType: "Insulation Contractor",
+    provider: { "@id": `${site.url}/#business` },
+    areaServed: { "@type": "City", name: area.city },
+    url: `${site.url}/service-areas/${area.slug}`,
+  };
+}
+
 export function faqSchema(faqs: { q: string; a: string }[]) {
   return {
     "@context": "https://schema.org",

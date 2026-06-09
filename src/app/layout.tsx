@@ -24,11 +24,11 @@ const zilla = Zilla_Slab({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "H&S Insulation — Spray Foam, Blown-In & Batt Insulation in NorCal",
+    default: "H&S Insulation, Spray Foam, Blown-In & Batt Insulation in NorCal",
     template: "%s | H&S Insulation",
   },
   description:
-    "Locally owned insulation contractor serving Yuba City, Marysville, and Northern California since 2020. Spray foam, blown-in, batt insulation, and old insulation removal. Free estimates — English & Spanish.",
+    "Locally owned insulation contractor serving Yuba City, Marysville, and Northern California since 2020. Spray foam, blown-in, batt insulation, and old insulation removal. Free estimates, English & Spanish.",
   keywords: [
     "insulation contractor Yuba City",
     "spray foam insulation",
@@ -43,14 +43,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: site.url,
     siteName: site.brand,
-    title: "H&S Insulation — NorCal Insulation, Done Clean",
+    title: "H&S Insulation, NorCal Insulation, Done Clean",
     description:
       "Spray foam, blown-in, batt insulation, and old insulation removal across Yuba City and Northern California. Free estimates, English & Spanish.",
     images: [{ url: "/images/og/og-image.png", width: 1200, height: 630, alt: "H&S Insulation" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "H&S Insulation — NorCal Insulation, Done Clean",
+    title: "H&S Insulation, NorCal Insulation, Done Clean",
     description: "Spray foam, blown-in, batt & insulation removal across Northern California. Free estimates.",
     images: ["/images/og/og-image.png"],
   },

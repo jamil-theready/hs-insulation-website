@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const a = authorBySlug(slug);
   if (!a) return {};
   return {
-    title: `${a.name} — ${a.role}`,
+    title: `${a.name}, ${a.role}`,
     description: a.bio.slice(0, 155),
     alternates: { canonical: `/author/${a.slug}` },
   };

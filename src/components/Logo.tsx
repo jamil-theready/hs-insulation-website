@@ -5,7 +5,7 @@ type Props = {
   iconClassName?: string;
 };
 
-// Layered House mark — house silhouette + 3 orange insulation waves.
+// Layered House mark, house silhouette + 3 orange insulation waves.
 export function LogoIcon({
   variant = "dark",
   className = "",

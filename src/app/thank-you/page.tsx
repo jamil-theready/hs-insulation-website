@@ -18,7 +18,7 @@ export default function ThankYouPage() {
           <LogoIcon className="h-11 w-11" />
         </div>
         <h1 className="font-display mt-6 text-3xl font-extrabold text-graphite sm:text-4xl">
-          Thank you — we got it!
+          Thank you, we got it!
         </h1>
         <p className="mt-4 text-lg text-[#4a4d51]">
           Thanks for reaching out to H&amp;S Insulation. We&apos;ll get back to you shortly to schedule your free estimate. Need us sooner?

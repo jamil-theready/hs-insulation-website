@@ -16,7 +16,7 @@ export const site = {
   domain: "hernandezinsulation.com",
   url: "https://hernandezinsulation.com",
   owner: "Heradio Hernandez",
-  hours: "Mon–Sat, 7:00 AM – 6:00 PM",
+  hours: "Monday to Saturday, 7:00 AM to 6:00 PM",
   bilingual: true,
   social: {
     facebook: "",
@@ -53,7 +53,7 @@ export const services: Service[] = [
     name: "Spray Foam Insulation",
     short: "Spray Foam",
     blurb:
-      "High-performance closed- and open-cell spray foam that seals air leaks and insulates in one step — the gold standard for energy efficiency.",
+      "High-performance closed- and open-cell spray foam that seals air leaks and insulates in one step, the gold standard for energy efficiency.",
     image: "/images/services/spray-foam.svg",
     bestFor: "Attics, walls, rim joists, and crawl spaces where air sealing matters most.",
     benefits: [
@@ -65,7 +65,7 @@ export const services: Service[] = [
     body: [
       {
         heading: "What spray foam does",
-        text: "Spray foam expands on contact to fill every gap, crack, and cavity — the places batt insulation can't reach. That seal is what stops the drafts and uneven temperatures most NorCal homes struggle with.",
+        text: "Spray foam expands on contact to fill every gap, crack, and cavity, the places batt insulation can't reach. That seal is what stops the drafts and uneven temperatures most NorCal homes struggle with.",
       },
       {
         heading: "Open-cell vs. closed-cell",
@@ -78,7 +78,7 @@ export const services: Service[] = [
     name: "Blown-In Insulation",
     short: "Blown-In",
     blurb:
-      "Fast, even attic coverage with blown-in cellulose or fiberglass — the most cost-effective way to bring an older attic up to today's energy standards.",
+      "Fast, even attic coverage with blown-in cellulose or fiberglass, the most cost-effective way to bring an older attic up to today's energy standards.",
     image: "/images/services/blown-in.svg",
     bestFor: "Attic floors, hard-to-reach cavities, and topping up thin existing insulation.",
     benefits: [
@@ -94,7 +94,7 @@ export const services: Service[] = [
       },
       {
         heading: "Clean install, every time",
-        text: "We mask off living spaces, control the dust, and measure depth as we go so you get the coverage you paid for — verified, not guessed.",
+        text: "We mask off living spaces, control the dust, and measure depth as we go so you get the coverage you paid for, verified, not guessed.",
       },
     ],
   },
@@ -103,19 +103,19 @@ export const services: Service[] = [
     name: "Batt Insulation",
     short: "Batt",
     blurb:
-      "Precision-fit fiberglass and mineral wool batts for walls, floors, and new construction — reliable R-value installed the right way.",
+      "Precision-fit fiberglass and mineral wool batts for walls, floors, and new construction, reliable R-value installed the right way.",
     image: "/images/services/batt.svg",
     bestFor: "Open walls, new construction, garages, and between-floor sound control.",
     benefits: [
       "Cost-effective for open wall cavities",
-      "Cut and fit snug — no compression, no gaps",
+      "Cut and fit snug, no compression, no gaps",
       "Mineral wool options for fire and sound",
       "Ideal for new builds and remodels",
     ],
     body: [
       {
         heading: "Done right or not at all",
-        text: "Batt insulation only performs when it's cut to fit and installed without gaps or compression. Most underperforming walls aren't the material's fault — they're the install. We fit every cavity tight, around every outlet and pipe.",
+        text: "Batt insulation only performs when it's cut to fit and installed without gaps or compression. Most underperforming walls aren't the material's fault, they're the install. We fit every cavity tight, around every outlet and pipe.",
       },
       {
         heading: "The right material for the room",
@@ -128,19 +128,19 @@ export const services: Service[] = [
     name: "Old Insulation Removal",
     short: "Vacuum Removal",
     blurb:
-      "Complete vacuum removal of old, damaged, or contaminated insulation — a clean slate before we install new, so you're not trapping rodents, mold, or dust in your attic.",
+      "Complete vacuum removal of old, damaged, or contaminated insulation, a clean slate before we install new, so you're not trapping rodents, mold, or dust in your attic.",
     image: "/images/services/vacuum-removal.svg",
     bestFor: "Attics with pest damage, water damage, mold, or decades-old settled insulation.",
     benefits: [
       "Removes rodent-soiled or water-damaged material",
       "Clears the way for a clean, full-value reinstall",
       "Improves air quality and removes odors",
-      "Sealed disposal — no mess left behind",
+      "Sealed disposal, no mess left behind",
     ],
     body: [
       {
         heading: "Start clean",
-        text: "Old insulation collects dust, allergens, and — too often — rodent droppings and moisture. Adding new insulation on top of that just seals the problem in. We vacuum it all out and haul it away first.",
+        text: "Old insulation collects dust, allergens, and, too often, rodent droppings and moisture. Adding new insulation on top of that just seals the problem in. We vacuum it all out and haul it away first.",
       },
       {
         heading: "Then we air-seal",
@@ -175,7 +175,7 @@ export const serviceAreas: ServiceArea[] = [
     climate:
       "Yuba City summers regularly push past 100°F, and that heat pours straight into an under-insulated attic and radiates down into your living space all afternoon. A properly insulated attic is the single biggest thing standing between that valley heat and your AC bill.",
     housing:
-      "We see everything here — postwar homes near downtown and Gray Avenue that have never had their original insulation touched, and newer subdivisions out toward Tierra Buena and the bypass that were built to a minimum code and could use a top-up.",
+      "We see everything here, postwar homes near downtown and Gray Avenue that have never had their original insulation touched, and newer subdivisions out toward Tierra Buena and the bypass that were built to a minimum code and could use a top-up.",
     emphasis:
       "For most Yuba City homes, a blown-in attic top-up paired with air sealing gives the fastest comfort and bill improvement. Older homes with damaged or pest-affected insulation get a full removal first.",
     neighborhoods: ["Downtown / Gray Avenue", "Tierra Buena", "Richland", "Bridge Street corridor", "newer bypass subdivisions"],
@@ -189,9 +189,9 @@ export const serviceAreas: ServiceArea[] = [
     note: "Free, no-pressure estimates across Marysville.",
     elevation: "~63 ft · Feather River lowland",
     climate:
-      "Sitting in the floodplain where the Yuba meets the Feather, Marysville gets the full valley swing — triple-digit summers and damp, chilly winters. Old, settled insulation does almost nothing against either.",
+      "Sitting in the floodplain where the Yuba meets the Feather, Marysville gets the full valley swing, triple-digit summers and damp, chilly winters. Old, settled insulation does almost nothing against either.",
     housing:
-      "Marysville has some of the oldest housing stock in the region — many homes date to the 1800s and early 1900s. The original insulation (if there ever was any) is usually thin, compressed, and overdue for replacement.",
+      "Marysville has some of the oldest housing stock in the region, many homes date to the 1800s and early 1900s. The original insulation (if there ever was any) is usually thin, compressed, and overdue for replacement.",
     emphasis:
       "Historic Marysville homes almost always benefit from a full removal and reinstall. We clear out the old material, air-seal the gaps that were hidden underneath, and install fresh insulation to a modern R-value.",
     neighborhoods: ["Historic Downtown", "D Street", "Cotton Rosser area", "Ellis Lake neighborhoods"],
@@ -200,15 +200,15 @@ export const serviceAreas: ServiceArea[] = [
     slug: "sutter-county",
     city: "Sutter County",
     blurb:
-      "We serve homeowners throughout Sutter County — Live Oak, Sutter, and the surrounding rural properties where energy bills hit hardest.",
+      "We serve homeowners throughout Sutter County, Live Oak, Sutter, and the surrounding rural properties where energy bills hit hardest.",
     note: "Rural and acreage properties welcome.",
-    elevation: "~50–2,000 ft · valley & Buttes",
+    elevation: "~50 to 2,000 ft · valley & Buttes",
     climate:
       "From the orchards on the valley floor to homes tucked against the Sutter Buttes, the county sees scorching summers and cold tule-fog winters. Rural homes on propane or electric heat feel every gap in their insulation on the monthly bill.",
     housing:
       "Sutter County is farmhouses, acreage properties, and small-town homes in Live Oak and Sutter. Many have large, hard-to-reach attics and crawl spaces that were never properly insulated.",
     emphasis:
-      "Big rural attics are ideal for blown-in insulation — fast, even coverage at a great value. Crawl spaces and rim joists on older farmhouses often call for spray foam to stop drafts and moisture.",
+      "Big rural attics are ideal for blown-in insulation, fast, even coverage at a great value. Crawl spaces and rim joists on older farmhouses often call for spray foam to stop drafts and moisture.",
     neighborhoods: ["Live Oak", "Sutter", "Yuba City outskirts", "Sutter Buttes properties", "rural acreage"],
   },
   {
@@ -220,9 +220,9 @@ export const serviceAreas: ServiceArea[] = [
     note: "Foothill homes and cabins covered.",
     elevation: "~2,400 ft · Sierra foothills",
     climate:
-      "At 2,400 feet, Grass Valley gets genuine cold — frosty nights, the occasional snow, and long heating seasons. Here, insulation is about keeping the heat you paid for from escaping through the roof and walls.",
+      "At 2,400 feet, Grass Valley gets genuine cold, frosty nights, the occasional snow, and long heating seasons. Here, insulation is about keeping the heat you paid for from escaping through the roof and walls.",
     housing:
-      "Grass Valley is full of character homes — Gold Rush-era Victorians, foothill cabins, and custom builds on wooded lots. Many rely on wood or propane heat and lose far too much of it to thin insulation.",
+      "Grass Valley is full of character homes, Gold Rush-era Victorians, foothill cabins, and custom builds on wooded lots. Many rely on wood or propane heat and lose far too much of it to thin insulation.",
     emphasis:
       "Foothill homes benefit most from serious air sealing and high R-value. Spray foam in the attic and rim joists, backed by blown-in coverage, makes a dramatic difference on cold-weather heating bills.",
     neighborhoods: ["Downtown Grass Valley", "Alta Sierra", "Cedar Ridge", "Glenbrook Basin"],
@@ -236,11 +236,11 @@ export const serviceAreas: ServiceArea[] = [
     note: "Serving Auburn and the I-80 corridor.",
     elevation: "~1,200 ft · Sierra foothills",
     climate:
-      "Auburn sits at the gateway to the Sierra, with hot, dry summers and cool, wet winters. Homes here fight heat gain half the year and heat loss the other half — so balanced, whole-home insulation pays off year-round.",
+      "Auburn sits at the gateway to the Sierra, with hot, dry summers and cool, wet winters. Homes here fight heat gain half the year and heat loss the other half, so balanced, whole-home insulation pays off year-round.",
     housing:
       "Auburn blends Old Town's historic homes with newer hillside developments and custom builds. Older homes often need removal and reinstall, while newer ones usually just need a top-up to reach modern levels.",
     emphasis:
-      "We take a whole-home approach in Auburn — attic blown-in for the heat, spray foam where air sealing matters, and batt in any open walls during remodels.",
+      "We take a whole-home approach in Auburn, attic blown-in for the heat, spray foam where air sealing matters, and batt in any open walls during remodels.",
     neighborhoods: ["Old Town Auburn", "North Auburn", "Christian Valley", "Bowman", "Lake of the Pines area"],
   },
   {
@@ -252,11 +252,11 @@ export const serviceAreas: ServiceArea[] = [
     note: "High-country builds and second homes.",
     elevation: "~5,800 ft · high Sierra",
     climate:
-      "Truckee is true alpine — heavy snow, sub-freezing nights, and one of the coldest climates in California. Insulation here isn't a comfort upgrade, it's the difference between a warm home and frozen pipes.",
+      "Truckee is true alpine, heavy snow, sub-freezing nights, and one of the coldest climates in California. Insulation here isn't a comfort upgrade, it's the difference between a warm home and frozen pipes.",
     housing:
       "Truckee is mountain cabins, custom homes, and second homes built to handle snow load. The ones that struggle are usually older builds with under-spec insulation that can't keep up with deep-winter cold.",
     emphasis:
-      "High-country homes need maximum R-value and airtight sealing. Closed-cell spray foam is our go-to here — it delivers the highest R-value per inch and resists moisture from snow and ice.",
+      "High-country homes need maximum R-value and airtight sealing. Closed-cell spray foam is our go-to here, it delivers the highest R-value per inch and resists moisture from snow and ice.",
     neighborhoods: ["Downtown Truckee", "Tahoe Donner", "Glenshire", "Donner Lake", "Northstar area"],
   },
   {

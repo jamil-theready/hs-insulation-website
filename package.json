@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "seo:links": "node scripts/generate-link-library.mjs",
+    "seo:llms": "node scripts/generate-llms-txt.mjs",
+    "prebuild": "node scripts/generate-link-library.mjs && node scripts/generate-llms-txt.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

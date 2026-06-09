@@ -1,6 +1,6 @@
 ---
 title: "7 Signs Your NorCal Home Needs New Insulation"
-description: "Drafty rooms, high energy bills, and uneven temperatures are warning signs. Here's how to tell when your insulation is failing — and what to do about it."
+description: "Drafty rooms, high energy bills, and uneven temperatures are warning signs. Here's how to tell when your insulation is failing, and what to do about it."
 date: "2026-06-09"
 author: "Heradio Hernandez"
 category: "Home Comfort"
@@ -9,7 +9,7 @@ cover: "/images/before-after/attic-before.svg"
 
 ## Quick answer
 
-If your home has rooms that never feel comfortable, energy bills that climb every year, or an attic you haven't looked at since you moved in, your insulation is likely the problem. Most Northern California homes built before 2010 are under-insulated by today's standards — and the fix usually pays for itself in lower heating and cooling bills.
+If your home has rooms that never feel comfortable, energy bills that climb every year, or an attic you haven't looked at since you moved in, your insulation is likely the problem. Most Northern California homes built before 2010 are under-insulated by today's standards, and the fix usually pays for itself in lower heating and cooling bills.
 
 ## Why insulation matters more in Northern California
 
@@ -56,6 +56,6 @@ Climb up and look. If you can see the tops of the ceiling joists, or the insulat
 
 Every home is different, which is why we start with a free, no-pressure estimate. We'll look at your attic, measure what's there, and tell you honestly whether you need a full replacement or just a top-up.
 
-> The most professional, modern insulation work in the valley — explained in plain language, in English or Spanish.
+> The most professional, modern insulation work in the valley, explained in plain language, in English or Spanish.
 
 Ready to find out where your home stands? [Get a free estimate](/contact) and we'll take a look.

@@ -6,9 +6,9 @@ import { WaveTick } from "@/components/ui";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact — Free Insulation Estimate",
+  title: "Contact, Free Insulation Estimate",
   description:
-    "Request a free, no-pressure insulation estimate from H&S Insulation. Serving Yuba City and Northern California. Call or fill out the form — English & Spanish.",
+    "Request a free, no-pressure insulation estimate from H&S Insulation. Serving Yuba City and Northern California. Call or fill out the form, English & Spanish.",
   alternates: { canonical: "/contact" },
 };
 
@@ -24,7 +24,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Get in touch"
         title="Request your free estimate"
-        subtitle="Tell us about your home and we'll get back to you fast. No pressure, no obligation — and yes, we speak Spanish."
+        subtitle="Tell us about your home and we'll get back to you fast. No pressure, no obligation, and yes, we speak Spanish."
         breadcrumbs={[{ name: "Home", href: "/" }, { name: "Contact", href: "/contact" }]}
       />
 
@@ -54,7 +54,7 @@ export default function ContactPage() {
               <div className="mt-8 rounded-2xl bg-ink p-6">
                 <p className="font-display text-lg font-bold text-cream">Free &amp; no-pressure</p>
                 <p className="mt-1 text-sm text-cream/65">
-                  We&apos;ll inspect your home, measure what&apos;s there, and give you an honest written quote — at no cost.
+                  We&apos;ll inspect your home, measure what&apos;s there, and give you an honest written quote, at no cost.
                 </p>
               </div>
             </div>

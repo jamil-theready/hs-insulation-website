@@ -1,0 +1,52 @@
+name: Monthly Blog
+
+on:
+  schedule:
+    # 1st of each month, 9 AM Pacific (H&S contract = 1 SEO post/month)
+    - cron: '0 16 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install JS deps
+        run: npm ci
+
+      - name: Refresh internal link library
+        run: node scripts/generate-link-library.mjs
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python deps
+        run: pip install gspread google-auth google-api-python-client
+
+      - name: Generate blog post
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GCP_SA_KEY_JSON: ${{ secrets.GCP_SA_KEY_JSON }}
+        run: python scripts/daily-blog.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "hs-blog-bot"
+          git config user.email "bot@thereadyconsult.com"
+          git add content/blog/ .seo/internal-links.json
+          if git diff --cached --quiet; then
+            echo "No new blog post to commit."
+            exit 0
+          fi
+          SLUG=$(git diff --cached --name-only -- content/blog/ | head -1 | sed 's|content/blog/||; s|\.md$||')
+          git commit -m "add: monthly blog post ${SLUG}"
+          git push

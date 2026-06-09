@@ -23,7 +23,7 @@ export default function PrivacyPage() {
           </p>
           <h2>Information we collect</h2>
           <p>
-            When you submit our contact or estimate form, we collect the information you provide — such as your name, phone number, email address, city, and any details about your project. We may also collect basic, anonymous analytics about how visitors use our site.
+            When you submit our contact or estimate form, we collect the information you provide, such as your name, phone number, email address, city, and any details about your project. We may also collect basic, anonymous analytics about how visitors use our site.
           </p>
           <h2>How we use your information</h2>
           <p>

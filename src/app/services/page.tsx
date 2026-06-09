@@ -8,7 +8,7 @@ import { ArrowRight } from "@/components/ui";
 import { services, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Insulation Services — Spray Foam, Blown-In, Batt & Removal",
+  title: "Insulation Services, Spray Foam, Blown-In, Batt & Removal",
   description:
     "Spray foam, blown-in, and batt insulation, plus complete old insulation removal across Northern California. Free estimates from a locally owned crew.",
   alternates: { canonical: "/services" },

@@ -7,7 +7,7 @@ import { ArrowRight } from "@/components/ui";
 import { serviceAreas, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Service Areas — Insulation Across Northern California",
+  title: "Service Areas, Insulation Across Northern California",
   description:
     "H&S Insulation serves Yuba City, Marysville, Sutter County, Grass Valley, Auburn, Truckee, and the Lake Tahoe area. Find your city and request a free estimate.",
   alternates: { canonical: "/service-areas" },
@@ -19,7 +19,7 @@ export default function ServiceAreasPage() {
       <PageHero
         eyebrow="Where we work"
         title="Insulation across Northern California"
-        subtitle={`From our home base in ${site.baseCity}, we serve homeowners up the corridor — valley floor to foothills to the Tahoe basin.`}
+        subtitle={`From our home base in ${site.baseCity}, we serve homeowners up the corridor, valley floor to foothills to the Tahoe basin.`}
         breadcrumbs={[{ name: "Home", href: "/" }, { name: "Service Areas", href: "/service-areas" }]}
       />
 
@@ -41,7 +41,7 @@ export default function ServiceAreasPage() {
         </div>
       </section>
 
-      <CTASection heading="Not sure if you're in our area?" text="Give us a call — if we can help, we'll tell you straight." />
+      <CTASection heading="Not sure if you're in our area?" text="Give us a call, if we can help, we'll tell you straight." />
     </>
   );
 }

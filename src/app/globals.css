@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand — graphite / warm cream / safety orange (H&S Layered House) */
+  /* Brand, graphite / warm cream / safety orange (H&S Layered House) */
   --color-ink: #101010;
   --color-ink-2: #181b1e;
   --color-graphite: #26292d;

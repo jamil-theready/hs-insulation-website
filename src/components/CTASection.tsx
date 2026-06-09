@@ -4,7 +4,7 @@ import { Eyebrow } from "./ui";
 
 export default function CTASection({
   heading = "Let's make your home comfortable again",
-  text = "Free, no-pressure estimates. We show up on time, work clean, and explain everything in plain language — English or Spanish.",
+  text = "Free, no-pressure estimates. We show up on time, work clean, and explain everything in plain language, English or Spanish.",
 }: {
   heading?: string;
   text?: string;

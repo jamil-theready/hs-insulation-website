@@ -14,7 +14,7 @@ export default function Footer() {
             Ready for a more comfortable home?
           </h2>
           <p className="mx-auto mt-2 max-w-xl text-sm text-white/90 sm:text-base">
-            Free, no-pressure estimates across {site.region}. We&apos;ll tell you honestly what your home needs — in English or Spanish.
+            Free, no-pressure estimates across {site.region}. We&apos;ll tell you honestly what your home needs, in English or Spanish.
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="col-span-2 sm:col-span-3 lg:col-span-2">
           <Logo variant="light" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-cream/60">
-            Locally owned insulation contractor serving {site.baseCity} and the NorCal corridor since {site.since}. Spray foam, blown-in, batt, and old insulation removal — done clean.
+            Locally owned insulation contractor serving {site.baseCity} and the NorCal corridor since {site.since}. Spray foam, blown-in, batt, and old insulation removal, done clean.
           </p>
           <div className="mt-5 space-y-1.5 text-sm">
             <a href={site.phoneHref} className="block font-semibold text-cream hover:text-orange">{site.phone}</a>

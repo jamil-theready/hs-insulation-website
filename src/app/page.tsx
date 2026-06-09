@@ -14,19 +14,19 @@ import { faqSchema } from "@/lib/schema";
 
 const reasons = [
   { title: "We start clean", text: "Old, contaminated insulation comes out before anything new goes in. No sealing problems under fresh foam." },
-  { title: "Honest recommendations", text: "We spec the right product for each space — never an upsell. You'll understand exactly what you're paying for." },
+  { title: "Honest recommendations", text: "We spec the right product for each space, never an upsell. You'll understand exactly what you're paying for." },
   { title: "On time, every time", text: "We show up when we say we will, work clean, and treat your home like it's our own." },
   { title: "English & Spanish", text: "Every step explained in the language you're most comfortable with. Sí, hablamos español." },
 ];
 
 const steps = [
-  { n: "01", title: "Free estimate", text: "We inspect your attic or walls, measure what's there, and give you a clear written quote — no pressure." },
+  { n: "01", title: "Free estimate", text: "We inspect your attic or walls, measure what's there, and give you a clear written quote, no pressure." },
   { n: "02", title: "Clean install", text: "We mask off your living space, remove old material if needed, and install fresh insulation the right way." },
-  { n: "03", title: "Comfortable home", text: "Even temperatures, lower bills, and a quieter house — backed by work you can actually see." },
+  { n: "03", title: "Comfortable home", text: "Even temperatures, lower bills, and a quieter house, backed by work you can actually see." },
 ];
 
 const promises = [
-  { title: "A written estimate, free", text: "We inspect your home, measure what's actually there, and hand you a clear written quote — at no cost and with zero obligation." },
+  { title: "A written estimate, free", text: "We inspect your home, measure what's actually there, and hand you a clear written quote, at no cost and with zero obligation." },
   { title: "We show you the problem", text: "We go up in the attic and show you what's really going on, then explain your options in plain language so you can decide with confidence." },
   { title: "We leave it cleaner than we found it", text: "We mask off your living space, control the dust, and haul away every scrap. The only thing you'll notice is the comfort." },
 ];
@@ -59,7 +59,7 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/75">
-                Spray foam, blown-in, and batt insulation — plus full removal of old, contaminated material. Serving {site.baseCity}, Marysville, and the foothills up to Tahoe.
+                Spray foam, blown-in, and batt insulation, plus full removal of old, contaminated material. Serving {site.baseCity}, Marysville, and the foothills up to Tahoe.
               </p>
             </Reveal>
             <Reveal delay={0.15}>
@@ -85,7 +85,7 @@ export default function Home() {
                 <LogoIcon variant="light" className="h-14 w-14" />
                 <p className="mt-5 font-display text-xl font-bold text-cream">Why homeowners call us first</p>
                 <ul className="mt-4 space-y-3 text-sm text-cream/75">
-                  {["We go in the attic and show you the real problem", "Right product for each space — no upsells", "Clean job site, every single time", "Quotes you can actually understand"].map((t) => (
+                  {["We go in the attic and show you the real problem", "Right product for each space, no upsells", "Clean job site, every single time", "Quotes you can actually understand"].map((t) => (
                     <li key={t} className="flex gap-3">
                       <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
                       {t}
@@ -155,13 +155,13 @@ export default function Home() {
             <div>
               <Eyebrow>The difference</Eyebrow>
               <h2 className="font-display mt-4 text-3xl font-extrabold text-graphite sm:text-4xl">
-                We don&apos;t cover up the problem — we fix it
+                We don&apos;t cover up the problem, we fix it
               </h2>
               <p className="mt-4 text-lg text-[#4a4d51]">
                 Too many attics are stuffed with thin, settled, or rodent-damaged insulation. We remove what&apos;s failing, seal the gaps underneath, and install fresh material that actually performs.
               </p>
               <ul className="mt-6 space-y-3">
-                {["Full vacuum removal of old material", "Air sealing the hidden gaps", "Even, modern R-value coverage", "Sealed disposal — no mess left behind"].map((t) => (
+                {["Full vacuum removal of old material", "Air sealing the hidden gaps", "Even, modern R-value coverage", "Sealed disposal, no mess left behind"].map((t) => (
                   <li key={t} className="flex items-center gap-3 text-[#3a3d41]">
                     <span className="flex h-6 w-6 items-center justify-center rounded-full bg-orange-soft text-orange-dark">
                       <svg viewBox="0 0 20 20" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth={2.5}><path d="M4 10l4 4 8-9" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -253,7 +253,7 @@ export default function Home() {
                   Serving Yuba City and up the corridor
                 </h2>
                 <p className="mt-4 text-lg text-[#4a4d51]">
-                  From the valley floor to the foothills and Tahoe — if you&apos;re in Northern California, we can help.
+                  From the valley floor to the foothills and Tahoe, if you&apos;re in Northern California, we can help.
                 </p>
               </div>
               <Button href="/service-areas" variant="outline">All service areas <ArrowRight /></Button>

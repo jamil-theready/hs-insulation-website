@@ -36,7 +36,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <input type="hidden" name="access_key" value={site.web3formsKey} />
-      <input type="hidden" name="subject" value="New estimate request — H&S Insulation website" />
+      <input type="hidden" name="subject" value="New estimate request, H&S Insulation website" />
       <input type="hidden" name="from_name" value="H&S Insulation Website" />
       {/* Honeypot */}
       <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
