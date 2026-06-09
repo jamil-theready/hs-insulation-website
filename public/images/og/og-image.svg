@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16181b"/>
+      <stop offset="0.55" stop-color="#24282d"/>
+      <stop offset="1" stop-color="#16181b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.7" cy="0.25" r="0.9">
+      <stop offset="0" stop-color="#F26A21" stop-opacity="0.20"/>
+      <stop offset="0.6" stop-color="#F26A21" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g transform="rotate(2 600 315)">
+    <path d="M-180,201.60000000000002 q130,31.5 260,0 t260,0 t260,0 t260,0 t260,0 t260,0" fill="none" stroke="#F26A21" stroke-width="5.25" stroke-linecap="round" opacity="0.85"/><path d="M-180,245.70000000000002 q130,31.5 260,0 t260,0 t260,0 t260,0 t260,0 t260,0" fill="none" stroke="#F26A21" stroke-width="5.25" stroke-linecap="round" opacity="0.85"/><path d="M-180,289.8 q130,31.5 260,0 t260,0 t260,0 t260,0 t260,0 t260,0" fill="none" stroke="#F26A21" stroke-width="5.25" stroke-linecap="round" opacity="0.85"/><path d="M-180,333.90000000000003 q130,31.5 260,0 t260,0 t260,0 t260,0 t260,0 t260,0" fill="none" stroke="#F26A21" stroke-width="5.25" stroke-linecap="round" opacity="0.85"/><path d="M-180,378 q130,31.5 260,0 t260,0 t260,0 t260,0 t260,0 t260,0" fill="none" stroke="#F26A21" stroke-width="5.25" stroke-linecap="round" opacity="0.85"/><path d="M-180,422.1 q130,31.5 260,0 t260,0 t260,0 t260,0 t260,0 t260,0" fill="none" stroke="#F26A21" stroke-width="5.25" stroke-linecap="round" opacity="0.85"/>
+  </g>
+  <g transform="translate(285,122.5) scale(1.75)" opacity="0.06"><path d="M180,40 L110,96 L110,178 L250,178 L250,96 Z" fill="none" stroke="#f1f0ee" stroke-width="9" stroke-linejoin="round"/></g>
+  
+</svg>

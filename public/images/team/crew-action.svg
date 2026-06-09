@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1100" width="1000" height="1100">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16181b"/>
+      <stop offset="0.55" stop-color="#24282d"/>
+      <stop offset="1" stop-color="#16181b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.7" cy="0.25" r="0.9">
+      <stop offset="0" stop-color="#F26A21" stop-opacity="0.20"/>
+      <stop offset="0.6" stop-color="#F26A21" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1000" height="1100" fill="url(#g)"/>
+  <rect width="1000" height="1100" fill="url(#glow)"/>
+  <g transform="rotate(5 500 550)">
+    <path d="M-150,352 q108.33333333333333,55 216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0" fill="none" stroke="#F26A21" stroke-width="9.166666666666666" stroke-linecap="round" opacity="0.85"/><path d="M-150,429 q108.33333333333333,55 216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0" fill="none" stroke="#F26A21" stroke-width="9.166666666666666" stroke-linecap="round" opacity="0.85"/><path d="M-150,506 q108.33333333333333,55 216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0" fill="none" stroke="#F26A21" stroke-width="9.166666666666666" stroke-linecap="round" opacity="0.85"/><path d="M-150,583 q108.33333333333333,55 216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0" fill="none" stroke="#F26A21" stroke-width="9.166666666666666" stroke-linecap="round" opacity="0.85"/><path d="M-150,660 q108.33333333333333,55 216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0" fill="none" stroke="#F26A21" stroke-width="9.166666666666666" stroke-linecap="round" opacity="0.85"/><path d="M-150,737 q108.33333333333333,55 216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0 t216.66666666666666,0" fill="none" stroke="#F26A21" stroke-width="9.166666666666666" stroke-linecap="round" opacity="0.85"/>
+  </g>
+  <g transform="translate(-50,213.8888888888889) scale(3.0555555555555554)" opacity="0.06"><path d="M180,40 L110,96 L110,178 L250,178 L250,96 Z" fill="none" stroke="#f1f0ee" stroke-width="9" stroke-linejoin="round"/></g>
+  
+</svg>
