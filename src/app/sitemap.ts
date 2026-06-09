@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { site, services, serviceAreas } from "@/lib/site";
 import { getPostSlugs } from "@/lib/content";
+import { authors } from "@/lib/authors";
 
 export const dynamic = "force-static";
 
@@ -41,5 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...servicePages, ...areaPages, ...blogPages];
+  const authorPages: MetadataRoute.Sitemap = authors.map((a) => ({
+    url: `${base}/author/${a.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.4,
+  }));
+
+  return [...staticPages, ...servicePages, ...areaPages, ...blogPages, ...authorPages];
 }

@@ -53,19 +53,35 @@ export default async function AreaDetail({ params }: { params: Promise<{ slug: s
         <div className="container-x grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <Reveal>
-              <h2 className="font-display text-3xl font-bold text-graphite">
-                Comfortable homes in {a.city}, year-round
-              </h2>
-              <div className="mt-5 space-y-4 text-lg leading-relaxed text-[#4a4d51]">
-                <p>
-                  {a.city} homes face the full swing of Northern California weather. The right insulation is what keeps the heat out in summer, the warmth in through winter, and your energy bills under control all year.
-                </p>
-                <p>
-                  Whether your attic needs a simple top-up, a full removal and reinstall, or spray foam for serious air sealing, H&amp;S brings clean, professional work and honest recommendations to {a.city} — in English or Spanish.
-                </p>
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-cream-2 px-4 py-1.5 text-xs font-semibold text-muted">
+                <span className="h-1.5 w-1.5 rounded-full bg-orange" /> {a.elevation}
               </div>
+              <h2 className="font-display text-3xl font-bold text-graphite">
+                Insulation built for {a.city}&apos;s climate
+              </h2>
+              <div className="mt-5 space-y-5 text-lg leading-relaxed text-[#4a4d51]">
+                <p>{a.climate}</p>
+                <div>
+                  <h3 className="font-display text-xl font-bold text-graphite">The homes we work on here</h3>
+                  <p className="mt-2">{a.housing}</p>
+                </div>
+                <div>
+                  <h3 className="font-display text-xl font-bold text-graphite">What we usually recommend in {a.city}</h3>
+                  <p className="mt-2">{a.emphasis}</p>
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted">Areas we serve in &amp; around {a.city}</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {a.neighborhoods.map((n) => (
+                    <span key={n} className="rounded-full border border-line bg-white px-3.5 py-1.5 text-sm text-graphite">{n}</span>
+                  ))}
+                </div>
+              </div>
+
               <div className="mt-8 rounded-2xl border border-orange/30 bg-orange-soft px-5 py-4">
-                <p className="font-semibold text-graphite">{a.note}</p>
+                <p className="font-semibold text-graphite">{a.note} We work in English and Spanish.</p>
               </div>
             </Reveal>
           </div>

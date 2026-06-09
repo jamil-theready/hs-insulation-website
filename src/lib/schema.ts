@@ -16,7 +16,7 @@ export function localBusinessSchema() {
     url: site.url,
     telephone: site.phone,
     email: site.email,
-    image: `${site.url}/images/og/og-image.svg`,
+    image: `${site.url}/images/og/og-image.png`,
     priceRange: "$$",
     foundingDate: site.since,
     knowsLanguage: ["en", "es"],
@@ -81,6 +81,9 @@ export function blogPostingSchema(post: {
   slug: string;
   date: string;
   author: string;
+  authorUrl?: string;
+  authorImage?: string;
+  image?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -89,7 +92,13 @@ export function blogPostingSchema(post: {
     description: post.description,
     datePublished: post.date,
     dateModified: post.date,
-    author: { "@type": "Person", name: post.author },
+    ...(post.image ? { image: `${site.url}${post.image}` } : {}),
+    author: {
+      "@type": "Person",
+      name: post.author,
+      ...(post.authorUrl ? { url: post.authorUrl } : {}),
+      ...(post.authorImage ? { image: `${site.url}${post.authorImage}` } : {}),
+    },
     publisher: { "@id": `${site.url}/#business` },
     mainEntityOfPage: `${site.url}/blog/${post.slug}`,
   };

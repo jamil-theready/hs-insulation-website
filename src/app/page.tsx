@@ -25,10 +25,10 @@ const steps = [
   { n: "03", title: "Comfortable home", text: "Even temperatures, lower bills, and a quieter house — backed by work you can actually see." },
 ];
 
-const testimonials = [
-  { quote: "They removed the nasty old insulation in our attic and the difference was immediate. Our upstairs is finally usable in summer.", name: "Maria G.", city: "Yuba City" },
-  { quote: "Professional, on time, and they explained everything in Spanish for my parents. The house holds heat so much better now.", name: "Carlos R.", city: "Marysville" },
-  { quote: "Got three quotes — H&S was the only one that actually went in the attic and showed me the problem. Easy choice.", name: "Dan W.", city: "Auburn" },
+const promises = [
+  { title: "A written estimate, free", text: "We inspect your home, measure what's actually there, and hand you a clear written quote — at no cost and with zero obligation." },
+  { title: "We show you the problem", text: "We go up in the attic and show you what's really going on, then explain your options in plain language so you can decide with confidence." },
+  { title: "We leave it cleaner than we found it", text: "We mask off your living space, control the dust, and haul away every scrap. The only thing you'll notice is the comfort." },
 ];
 
 export default function Home() {
@@ -272,31 +272,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== TESTIMONIALS ===== */}
+      {/* ===== OUR PROMISE ===== */}
       <section className="bg-cream-2 py-20 sm:py-24">
         <div className="container-x">
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
-              <Eyebrow>Homeowners trust us</Eyebrow>
+              <Eyebrow>Our promise</Eyebrow>
               <h2 className="font-display mt-4 text-3xl font-extrabold text-graphite sm:text-4xl">
-                What our neighbors say
+                What you can count on
               </h2>
+              <p className="mt-4 text-lg text-[#4a4d51]">
+                We&apos;re a newer company building our reputation one clean job at a time. Here&apos;s what every {site.baseCity}-area homeowner gets from us.
+              </p>
             </div>
           </Reveal>
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {testimonials.map((t, i) => (
-              <Reveal key={t.name} delay={i * 0.07}>
-                <figure className="flex h-full flex-col rounded-2xl border border-line bg-white p-7 shadow-card">
-                  <div className="flex gap-1 text-orange">
-                    {Array.from({ length: 5 }).map((_, j) => (
-                      <svg key={j} viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.8 4.7 17.6l1-5.8L1.5 7.7l5.9-.9z" /></svg>
-                    ))}
-                  </div>
-                  <blockquote className="mt-4 flex-1 text-[#3a3d41]">&ldquo;{t.quote}&rdquo;</blockquote>
-                  <figcaption className="mt-5 text-sm font-semibold text-graphite">
-                    {t.name} <span className="font-normal text-muted">· {t.city}</span>
-                  </figcaption>
-                </figure>
+            {promises.map((p, i) => (
+              <Reveal key={p.title} delay={i * 0.07}>
+                <div className="flex h-full flex-col rounded-2xl border border-line bg-white p-7 shadow-card">
+                  <span className="font-display text-3xl font-extrabold text-orange">{String(i + 1).padStart(2, "0")}</span>
+                  <h3 className="mt-3 font-display text-lg font-bold text-graphite">{p.title}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-[#4a4d51]">{p.text}</p>
+                </div>
               </Reveal>
             ))}
           </div>

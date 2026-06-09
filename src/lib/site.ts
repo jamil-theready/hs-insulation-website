@@ -156,6 +156,11 @@ export type ServiceArea = {
   county?: string;
   blurb: string;
   note: string;
+  elevation: string;
+  climate: string;
+  housing: string;
+  emphasis: string;
+  neighborhoods: string[];
 };
 
 export const serviceAreas: ServiceArea[] = [
@@ -166,6 +171,14 @@ export const serviceAreas: ServiceArea[] = [
     blurb:
       "Our home base. From the older homes near downtown to new builds out toward the bypass, we keep Yuba City comfortable through hot valley summers and cold winters.",
     note: "Same-week estimates for Yuba City homeowners.",
+    elevation: "~60 ft · valley floor",
+    climate:
+      "Yuba City summers regularly push past 100°F, and that heat pours straight into an under-insulated attic and radiates down into your living space all afternoon. A properly insulated attic is the single biggest thing standing between that valley heat and your AC bill.",
+    housing:
+      "We see everything here — postwar homes near downtown and Gray Avenue that have never had their original insulation touched, and newer subdivisions out toward Tierra Buena and the bypass that were built to a minimum code and could use a top-up.",
+    emphasis:
+      "For most Yuba City homes, a blown-in attic top-up paired with air sealing gives the fastest comfort and bill improvement. Older homes with damaged or pest-affected insulation get a full removal first.",
+    neighborhoods: ["Downtown / Gray Avenue", "Tierra Buena", "Richland", "Bridge Street corridor", "newer bypass subdivisions"],
   },
   {
     slug: "marysville",
@@ -174,6 +187,14 @@ export const serviceAreas: ServiceArea[] = [
     blurb:
       "Just across the river, Marysville's historic housing stock is often badly under-insulated. We bring those attics up to modern standards without the runaround.",
     note: "Free, no-pressure estimates across Marysville.",
+    elevation: "~63 ft · Feather River lowland",
+    climate:
+      "Sitting in the floodplain where the Yuba meets the Feather, Marysville gets the full valley swing — triple-digit summers and damp, chilly winters. Old, settled insulation does almost nothing against either.",
+    housing:
+      "Marysville has some of the oldest housing stock in the region — many homes date to the 1800s and early 1900s. The original insulation (if there ever was any) is usually thin, compressed, and overdue for replacement.",
+    emphasis:
+      "Historic Marysville homes almost always benefit from a full removal and reinstall. We clear out the old material, air-seal the gaps that were hidden underneath, and install fresh insulation to a modern R-value.",
+    neighborhoods: ["Historic Downtown", "D Street", "Cotton Rosser area", "Ellis Lake neighborhoods"],
   },
   {
     slug: "sutter-county",
@@ -181,6 +202,14 @@ export const serviceAreas: ServiceArea[] = [
     blurb:
       "We serve homeowners throughout Sutter County — Live Oak, Sutter, and the surrounding rural properties where energy bills hit hardest.",
     note: "Rural and acreage properties welcome.",
+    elevation: "~50–2,000 ft · valley & Buttes",
+    climate:
+      "From the orchards on the valley floor to homes tucked against the Sutter Buttes, the county sees scorching summers and cold tule-fog winters. Rural homes on propane or electric heat feel every gap in their insulation on the monthly bill.",
+    housing:
+      "Sutter County is farmhouses, acreage properties, and small-town homes in Live Oak and Sutter. Many have large, hard-to-reach attics and crawl spaces that were never properly insulated.",
+    emphasis:
+      "Big rural attics are ideal for blown-in insulation — fast, even coverage at a great value. Crawl spaces and rim joists on older farmhouses often call for spray foam to stop drafts and moisture.",
+    neighborhoods: ["Live Oak", "Sutter", "Yuba City outskirts", "Sutter Buttes properties", "rural acreage"],
   },
   {
     slug: "grass-valley",
@@ -189,6 +218,14 @@ export const serviceAreas: ServiceArea[] = [
     blurb:
       "Up in the foothills, insulation is about holding heat through real winters. We help Grass Valley homes stay warm and cut heating costs.",
     note: "Foothill homes and cabins covered.",
+    elevation: "~2,400 ft · Sierra foothills",
+    climate:
+      "At 2,400 feet, Grass Valley gets genuine cold — frosty nights, the occasional snow, and long heating seasons. Here, insulation is about keeping the heat you paid for from escaping through the roof and walls.",
+    housing:
+      "Grass Valley is full of character homes — Gold Rush-era Victorians, foothill cabins, and custom builds on wooded lots. Many rely on wood or propane heat and lose far too much of it to thin insulation.",
+    emphasis:
+      "Foothill homes benefit most from serious air sealing and high R-value. Spray foam in the attic and rim joists, backed by blown-in coverage, makes a dramatic difference on cold-weather heating bills.",
+    neighborhoods: ["Downtown Grass Valley", "Alta Sierra", "Cedar Ridge", "Glenbrook Basin"],
   },
   {
     slug: "auburn",
@@ -197,6 +234,14 @@ export const serviceAreas: ServiceArea[] = [
     blurb:
       "Auburn's mix of historic and modern homes both benefit from a proper attic and wall insulation upgrade. We handle the corridor up Highway 49 and I-80.",
     note: "Serving Auburn and the I-80 corridor.",
+    elevation: "~1,200 ft · Sierra foothills",
+    climate:
+      "Auburn sits at the gateway to the Sierra, with hot, dry summers and cool, wet winters. Homes here fight heat gain half the year and heat loss the other half — so balanced, whole-home insulation pays off year-round.",
+    housing:
+      "Auburn blends Old Town's historic homes with newer hillside developments and custom builds. Older homes often need removal and reinstall, while newer ones usually just need a top-up to reach modern levels.",
+    emphasis:
+      "We take a whole-home approach in Auburn — attic blown-in for the heat, spray foam where air sealing matters, and batt in any open walls during remodels.",
+    neighborhoods: ["Old Town Auburn", "North Auburn", "Christian Valley", "Bowman", "Lake of the Pines area"],
   },
   {
     slug: "truckee",
@@ -205,6 +250,14 @@ export const serviceAreas: ServiceArea[] = [
     blurb:
       "Mountain homes demand serious insulation. We help Truckee homeowners and cabin owners keep the heat in and the snow-season bills down.",
     note: "High-country builds and second homes.",
+    elevation: "~5,800 ft · high Sierra",
+    climate:
+      "Truckee is true alpine — heavy snow, sub-freezing nights, and one of the coldest climates in California. Insulation here isn't a comfort upgrade, it's the difference between a warm home and frozen pipes.",
+    housing:
+      "Truckee is mountain cabins, custom homes, and second homes built to handle snow load. The ones that struggle are usually older builds with under-spec insulation that can't keep up with deep-winter cold.",
+    emphasis:
+      "High-country homes need maximum R-value and airtight sealing. Closed-cell spray foam is our go-to here — it delivers the highest R-value per inch and resists moisture from snow and ice.",
+    neighborhoods: ["Downtown Truckee", "Tahoe Donner", "Glenshire", "Donner Lake", "Northstar area"],
   },
   {
     slug: "lake-tahoe",
@@ -212,6 +265,14 @@ export const serviceAreas: ServiceArea[] = [
     blurb:
       "From lakeside homes to rentals, Tahoe properties live or die on insulation. We bring spray foam and blown-in solutions built for alpine conditions.",
     note: "Tahoe basin homes and short-term rentals.",
+    elevation: "~6,225 ft · Tahoe basin",
+    climate:
+      "The Tahoe basin sees brutal winters, intense sun at altitude, and constant freeze-thaw cycles. Poorly insulated homes bleed heat, run up enormous propane bills, and risk ice dams and frozen pipes.",
+    housing:
+      "Tahoe is a mix of full-time residences, vacation homes, and short-term rentals. For rental owners especially, efficient insulation means lower operating costs and more comfortable guests through ski season.",
+    emphasis:
+      "We build for alpine conditions: closed-cell spray foam for airtight, high-R sealing, plus blown-in for attic coverage. Rental-ready efficiency that holds up to Tahoe winters.",
+    neighborhoods: ["Kings Beach", "Tahoe City", "Tahoma", "Incline-adjacent west shore", "rental properties basin-wide"],
   },
 ];
 

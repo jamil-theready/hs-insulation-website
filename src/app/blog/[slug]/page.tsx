@@ -7,8 +7,10 @@ import CTASection from "@/components/CTASection";
 import ShareBar from "@/components/ShareBar";
 import JsonLd from "@/components/JsonLd";
 import { ArrowRight } from "@/components/ui";
+import Image from "next/image";
 import { getPost, getPostSlugs, getAllPostsMeta, formatDate } from "@/lib/content";
 import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+import { authorByName } from "@/lib/authors";
 import { site } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -38,12 +40,22 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   if (!post) notFound();
 
   const related = getAllPostsMeta().filter((p) => p.slug !== post.slug).slice(0, 3);
+  const author = authorByName(post.author);
 
   return (
     <>
       <JsonLd
         data={[
-          blogPostingSchema({ title: post.title, description: post.description, slug: post.slug, date: post.date, author: post.author }),
+          blogPostingSchema({
+            title: post.title,
+            description: post.description,
+            slug: post.slug,
+            date: post.date,
+            author: post.author,
+            authorUrl: `${site.url}/author/${author.slug}`,
+            authorImage: author.avatar,
+            image: post.cover,
+          }),
           breadcrumbSchema([
             { name: "Home", url: site.url },
             { name: "Blog", url: `${site.url}/blog` },
@@ -75,7 +87,34 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             {/* CENTER: article */}
             <div className="lg:col-span-8">
               <Media src={post.cover} alt={post.title} className="aspect-[16/9]" priority />
-              <div className="prose-hs mt-10 max-w-none" dangerouslySetInnerHTML={{ __html: post.html }} />
+              {/* Byline */}
+              <div className="mt-6 flex items-center gap-3">
+                <Link href={`/author/${author.slug}`} className="flex items-center gap-3 group">
+                  <span className="relative h-10 w-10 overflow-hidden rounded-full border border-line bg-graphite">
+                    <Image src={author.avatar} alt={author.name} width={40} height={40} className="h-full w-full object-cover" />
+                  </span>
+                  <span>
+                    <span className="block text-sm font-semibold text-graphite group-hover:text-orange-dark">{author.name}</span>
+                    <span className="block text-xs text-muted">{author.role} · {formatDate(post.date)}</span>
+                  </span>
+                </Link>
+              </div>
+
+              <div className="prose-hs mt-8 max-w-none" dangerouslySetInnerHTML={{ __html: post.html }} />
+
+              {/* Author bio box (E-E-A-T) */}
+              <div className="mt-12 flex flex-col gap-4 rounded-2xl border border-line bg-cream-2 p-6 sm:flex-row">
+                <Link href={`/author/${author.slug}`} className="shrink-0">
+                  <span className="relative block h-16 w-16 overflow-hidden rounded-full border border-line bg-graphite">
+                    <Image src={author.avatar} alt={author.name} width={64} height={64} className="h-full w-full object-cover" />
+                  </span>
+                </Link>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted">Written by</p>
+                  <Link href={`/author/${author.slug}`} className="font-display text-lg font-bold text-graphite hover:text-orange-dark">{author.name}</Link>
+                  <p className="mt-1.5 text-sm leading-relaxed text-[#4a4d51]">{author.bio}</p>
+                </div>
+              </div>
 
               {/* CTA card */}
               <div className="mt-12 rounded-2xl bg-ink p-8 text-center">

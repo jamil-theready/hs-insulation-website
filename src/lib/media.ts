@@ -12,7 +12,7 @@ export const media = {
   crew: "/images/team/crew-action.svg",
   textureFoam: "/images/textures/sprayfoam-closeup.svg",
   textureBatt: "/images/textures/batt-rolls.svg",
-  og: "/images/og/og-image.svg",
+  og: "/images/og/og-image.png",
 } as const;
 
 // Whether the photo slots are still branded placeholders (true) or real photos.
