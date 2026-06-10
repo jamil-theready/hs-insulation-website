@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import HeroMedia from "@/components/HeroMedia";
+import BeforeAfter from "@/components/BeforeAfter";
 import Media from "@/components/Media";
 import CTASection from "@/components/CTASection";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -131,9 +132,9 @@ export default function Home() {
       </section>
 
       {/* ===== BEFORE / AFTER ===== */}
-      <section className="bg-cream-2 py-20 sm:py-24">
-        <div className="container-x grid items-center gap-12 lg:grid-cols-2">
-          <Reveal>
+      <section className="overflow-hidden bg-cream-2 py-20 sm:py-28">
+        <div className="container-x grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+          <Reveal className="lg:col-span-5">
             <div>
               <Eyebrow>The difference</Eyebrow>
               <h2 className="font-display mt-4 text-3xl font-extrabold text-graphite sm:text-4xl">
@@ -157,21 +158,8 @@ export default function Home() {
               </div>
             </div>
           </Reveal>
-          <Reveal delay={0.1}>
-            <div className="grid grid-cols-2 gap-5">
-              <div className="relative -rotate-1">
-                <Media src={media.atticBefore} alt="Attic before new insulation" className="aspect-[3/4] shadow-lift ring-1 ring-black/5" />
-                <span className="absolute left-3 top-3 rounded-full bg-graphite/85 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-cream backdrop-blur-sm">
-                  Before
-                </span>
-              </div>
-              <div className="relative mt-10 rotate-1">
-                <Media src={media.atticAfter} alt="Attic after fresh insulation" className="aspect-[3/4] shadow-lift ring-1 ring-black/5" />
-                <span className="absolute left-3 top-3 rounded-full bg-orange px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-white">
-                  After
-                </span>
-              </div>
-            </div>
+          <Reveal delay={0.1} className="lg:col-span-7">
+            <BeforeAfter before={media.atticBefore} after={media.atticAfter} />
           </Reveal>
         </div>
       </section>
