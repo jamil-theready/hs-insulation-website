@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import HeroMedia from "@/components/HeroMedia";
 import Media from "@/components/Media";
 import CTASection from "@/components/CTASection";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -31,15 +31,8 @@ export default function Home() {
 
       {/* ===== HERO ===== */}
       <section className="relative overflow-hidden bg-ink">
-        <Image
-          src={media.heroPrimary}
-          alt="Spray foam insulation being applied in an attic"
-          fill
-          priority
-          className="object-cover opacity-55"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/40" />
-        <div className="container-x relative grid items-center gap-10 py-20 sm:py-28 lg:grid-cols-12 lg:py-32">
+        <HeroMedia poster={media.heroPrimary} />
+        <div className="container-x relative grid items-center gap-10 py-24 sm:py-32 lg:grid-cols-12 lg:py-36">
           <div className="lg:col-span-7">
             <Reveal>
               <Eyebrow light>NorCal Insulation · Since {site.since}</Eyebrow>
