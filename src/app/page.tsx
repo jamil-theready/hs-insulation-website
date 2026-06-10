@@ -165,14 +165,18 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Media src={media.atticBefore} alt="Attic before new insulation" className="aspect-[4/5]" />
-                <p className="text-center text-xs font-semibold uppercase tracking-wider text-muted">Before</p>
+            <div className="grid grid-cols-2 gap-5">
+              <div className="relative -rotate-1">
+                <Media src={media.atticBefore} alt="Attic before new insulation" className="aspect-[3/4] shadow-lift ring-1 ring-black/5" />
+                <span className="absolute left-3 top-3 rounded-full bg-graphite/85 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-cream backdrop-blur-sm">
+                  Before
+                </span>
               </div>
-              <div className="space-y-2 pt-8">
-                <Media src={media.atticAfter} alt="Attic after fresh insulation" className="aspect-[4/5]" />
-                <p className="text-center text-xs font-semibold uppercase tracking-wider text-orange-dark">After</p>
+              <div className="relative mt-10 rotate-1">
+                <Media src={media.atticAfter} alt="Attic after fresh insulation" className="aspect-[3/4] shadow-lift ring-1 ring-black/5" />
+                <span className="absolute left-3 top-3 rounded-full bg-orange px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-white">
+                  After
+                </span>
               </div>
             </div>
           </Reveal>
@@ -190,16 +194,22 @@ export default function Home() {
               </h2>
             </div>
           </Reveal>
-          <div className="mt-12 grid gap-10 md:grid-cols-3">
-            {steps.map((s, i) => (
-              <Reveal key={s.n} delay={i * 0.08}>
-                <div className="h-full">
-                  <span className="font-display text-4xl font-extrabold text-orange">{s.n}</span>
-                  <h3 className="mt-4 font-display text-xl font-bold text-graphite">{s.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[#4a4d51]">{s.text}</p>
-                </div>
-              </Reveal>
-            ))}
+          <div className="relative mt-14">
+            {/* connecting line behind the badges */}
+            <div className="absolute inset-x-0 top-7 hidden h-px bg-line md:block" />
+            <div className="grid gap-12 md:grid-cols-3 md:gap-8">
+              {steps.map((s, i) => (
+                <Reveal key={s.n} delay={i * 0.08}>
+                  <div className="relative">
+                    <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-orange font-display text-xl font-extrabold text-white shadow-lift ring-8 ring-cream-2">
+                      {s.n}
+                    </div>
+                    <h3 className="mt-6 font-display text-xl font-bold text-graphite">{s.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-[#4a4d51]">{s.text}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -251,9 +261,15 @@ export default function Home() {
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {promises.map((p, i) => (
               <Reveal key={p.title} delay={i * 0.07}>
-                <div className="flex h-full flex-col rounded-2xl border border-line bg-white p-7 shadow-card">
-                  <span className="font-display text-3xl font-extrabold text-orange">{String(i + 1).padStart(2, "0")}</span>
-                  <h3 className="mt-3 font-display text-lg font-bold text-graphite">{p.title}</h3>
+                <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white p-8 shadow-card transition-all hover:-translate-y-1 hover:shadow-lift">
+                  <span className="absolute inset-x-0 top-0 h-1 bg-orange" />
+                  <div className="flex items-center gap-4">
+                    <span className="font-display text-5xl font-extrabold text-orange/15 transition-colors group-hover:text-orange/25">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <WaveTick className="text-orange" />
+                  </div>
+                  <h3 className="mt-4 font-display text-lg font-bold text-graphite">{p.title}</h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-[#4a4d51]">{p.text}</p>
                 </div>
               </Reveal>
