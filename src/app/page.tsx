@@ -30,9 +30,9 @@ export default function Home() {
       <JsonLd data={faqSchema(faqs)} />
 
       {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden bg-ink">
+      <section className="relative flex min-h-[88vh] items-center overflow-hidden bg-ink">
         <HeroMedia poster={media.heroPrimary} />
-        <div className="container-x relative grid items-center gap-10 py-24 sm:py-32 lg:grid-cols-12 lg:py-36">
+        <div className="container-x relative grid w-full items-center gap-10 py-20 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <Reveal>
               <Eyebrow light>NorCal Insulation · Since {site.since}</Eyebrow>
