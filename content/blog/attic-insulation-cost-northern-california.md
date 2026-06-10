@@ -4,7 +4,7 @@ description: "A clear breakdown of what attic insulation costs in the Yuba City 
 date: "2026-06-09"
 author: "Heradio Hernandez"
 category: "Cost & Value"
-cover: "/images/before-after/attic-after.svg"
+cover: "/images/before-after/attic-after.jpg"
 ---
 
 ## Quick answer

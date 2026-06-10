@@ -12,13 +12,6 @@ import { media } from "@/lib/media";
 import { faqs } from "@/lib/faqs";
 import { faqSchema } from "@/lib/schema";
 
-const reasons = [
-  { title: "We start clean", text: "Old, contaminated insulation comes out before anything new goes in. No sealing problems under fresh foam." },
-  { title: "Honest recommendations", text: "We spec the right product for each space, never an upsell. You'll understand exactly what you're paying for." },
-  { title: "On time, every time", text: "We show up when we say we will, work clean, and treat your home like it's our own." },
-  { title: "English & Spanish", text: "Every step explained in the language you're most comfortable with. Sí, hablamos español." },
-];
-
 const steps = [
   { n: "01", title: "Free estimate", text: "We inspect your attic or walls, measure what's there, and give you a clear written quote, no pressure." },
   { n: "02", title: "Clean install", text: "We mask off your living space, remove old material if needed, and install fresh insulation the right way." },
@@ -64,9 +57,9 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.15}>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Button href={site.phoneHref}>Get a Free Estimate</Button>
-                <Button href="/services" variant="outline-light">
-                  See What We Do <ArrowRight />
+                <Button href="/contact">Get a Free Estimate</Button>
+                <Button href={site.phoneHref} variant="outline-light">
+                  Call {site.phone}
                 </Button>
               </div>
             </Reveal>
@@ -81,21 +74,17 @@ export default function Home() {
 
           <div className="hidden lg:col-span-5 lg:block">
             <Reveal delay={0.15}>
-              <div className="rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-sm">
-                <LogoIcon variant="light" className="h-14 w-14" />
-                <p className="mt-5 font-display text-xl font-bold text-cream">Why homeowners call us first</p>
-                <ul className="mt-4 space-y-3 text-sm text-cream/75">
-                  {["We go in the attic and show you the real problem", "Right product for each space, no upsells", "Clean job site, every single time", "Quotes you can actually understand"].map((t) => (
+              <div className="ml-auto max-w-xs border-l border-white/15 pl-7">
+                <LogoIcon variant="light" className="h-12 w-12" />
+                <p className="mt-5 font-display text-lg font-bold text-cream">Why homeowners call us first</p>
+                <ul className="mt-4 space-y-3 text-sm text-cream/70">
+                  {["We show you the real problem in your attic", "The right product for each space, no upsells", "A clean job site, every single time"].map((t) => (
                     <li key={t} className="flex gap-3">
-                      <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
+                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-orange" />
                       {t}
                     </li>
                   ))}
                 </ul>
-                <a href={site.phoneHref} className="mt-6 flex items-center justify-between rounded-xl bg-orange px-4 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5">
-                  Call {site.phone}
-                  <ArrowRight />
-                </a>
               </div>
             </Reveal>
           </div>
@@ -190,51 +179,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== WHY CHOOSE US ===== */}
-      <section className="py-20 sm:py-24">
-        <div className="container-x">
-          <Reveal>
-            <div className="mx-auto max-w-2xl text-center">
-              <Eyebrow>Why H&amp;S</Eyebrow>
-              <h2 className="font-display mt-4 text-3xl font-extrabold text-graphite sm:text-4xl">
-                The most professional insulation crew in the valley
-              </h2>
-            </div>
-          </Reveal>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {reasons.map((r, i) => (
-              <Reveal key={r.title} delay={i * 0.06}>
-                <div className="h-full rounded-2xl border border-line bg-white p-6 shadow-card">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-orange-soft">
-                    <LogoIcon className="h-7 w-7" />
-                  </div>
-                  <h3 className="mt-4 font-display text-lg font-bold text-graphite">{r.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[#4a4d51]">{r.text}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ===== PROCESS ===== */}
-      <section className="bg-graphite py-20 sm:py-24">
+      <section className="border-y border-line bg-cream-2 py-20 sm:py-24">
         <div className="container-x">
           <Reveal>
             <div className="max-w-2xl">
-              <Eyebrow light>How it works</Eyebrow>
-              <h2 className="font-display mt-4 text-3xl font-extrabold text-cream sm:text-4xl">
+              <Eyebrow>How it works</Eyebrow>
+              <h2 className="font-display mt-4 text-3xl font-extrabold text-graphite sm:text-4xl">
                 Three steps to a comfortable home
               </h2>
             </div>
           </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-10 md:grid-cols-3">
             {steps.map((s, i) => (
               <Reveal key={s.n} delay={i * 0.08}>
-                <div className="h-full rounded-2xl border border-line-dark bg-ink-2 p-7">
+                <div className="h-full">
                   <span className="font-display text-4xl font-extrabold text-orange">{s.n}</span>
-                  <h3 className="mt-4 font-display text-xl font-bold text-cream">{s.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-cream/65">{s.text}</p>
+                  <h3 className="mt-4 font-display text-xl font-bold text-graphite">{s.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-[#4a4d51]">{s.text}</p>
                 </div>
               </Reveal>
             ))}

@@ -14,7 +14,7 @@ export default function PageHero({
 }) {
   return (
     <section className="relative overflow-hidden bg-ink">
-      <svg aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.10]" preserveAspectRatio="none" viewBox="0 0 1200 320">
+      <svg aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.06]" preserveAspectRatio="none" viewBox="0 0 1200 320">
         {[50, 115, 180, 245].map((y) => (
           <path key={y} d={`M-20,${y} q60,38 120,0 t120,0 t120,0 t120,0 t120,0 t120,0 t120,0 t120,0 t120,0 t120,0 t120,0`} fill="none" stroke="#F26A21" strokeWidth={3} strokeLinecap="round" />
         ))}

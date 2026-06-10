@@ -65,12 +65,12 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <a
-              href={site.phoneHref}
+            <Link
+              href="/contact"
               className="hidden rounded-full bg-orange px-5 py-2.5 text-sm font-semibold text-white shadow-card transition-all hover:bg-orange-dark hover:-translate-y-0.5 sm:inline-flex"
             >
               Get a Free Estimate
-            </a>
+            </Link>
 
             {/* Hamburger */}
             <button

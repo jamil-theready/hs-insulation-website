@@ -4,7 +4,7 @@ description: "Drafty rooms, high energy bills, and uneven temperatures are warni
 date: "2026-06-09"
 author: "Heradio Hernandez"
 category: "Home Comfort"
-cover: "/images/before-after/attic-before.svg"
+cover: "/images/before-after/attic-before.jpg"
 ---
 
 ## Quick answer

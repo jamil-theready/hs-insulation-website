@@ -1,0 +1,49 @@
+H&S Insulation - Image Credits
+Stock images sourced from Wikimedia Commons / Openverse (Creative Commons / public domain),
+used as placeholders pending real job photos from Heradio. Several CC licenses require attribution.
+Replace with real photos to remove any attribution obligation.
+
+
+/images/hero/hero-attic-sprayfoam.jpg
+    title:  File:Installing installation in an attic (933
+    source: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Installing_installation_in_an_attic_%289337%29.jpg/1920px-Installing_installation_in_an_attic_%289337%29.jpg
+
+/images/services/spray-foam.jpg
+    title:  File:Chicago Closed Cell Spray Foam Insulatio
+    source: https://upload.wikimedia.org/wikipedia/commons/0/0c/Chicago_Closed_Cell_Spray_Foam_Insulation_In_Wall.jpg
+
+/images/services/blown-in.jpg
+    title:  File:Cableing and old insulation (6129748177)
+    source: https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Cableing_and_old_insulation_%286129748177%29.jpg/1920px-Cableing_and_old_insulation_%286129748177%29.jpg
+
+/images/services/batt.jpg
+    title:  File:TE221 insulinstall7 PNNLinsul 5-3-13.jpg
+    source: https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/TE221_insulinstall7_PNNLinsul_5-3-13.jpg/1920px-TE221_insulinstall7_PNNLinsul_5-3-13.jpg
+
+/images/services/vacuum-removal.jpg
+    title:  File:Insulating attic (49525467656).jpg
+    source: https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Insulating_attic_%2849525467656%29.jpg/1920px-Insulating_attic_%2849525467656%29.jpg
+
+/images/services/finished-beauty.jpg
+    title:  File:Application of insulation at 44th Street
+    source: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Application_of_insulation_at_44th_Street_in_the_future_LIRR_Passenger_Corridor._%28CM014B%2C_5-7-2018%29_%2842198296981%29.jpg/1920px-Application_of_insulation_at_44th_Street_in_the_future_LIRR_Passenger_Corridor._%28CM014B%2C_5-7-2018%29_%2842198296981%29.jpg
+
+/images/before-after/attic-before.jpg
+    title:  Paper Wasp Condo
+    source: https://live.staticflickr.com/2326/2233513025_f86f0e4d09_b.jpg
+
+/images/before-after/attic-after.jpg
+    title:  File:Insulating the Parsonage Roof (bd62c9a7-
+    source: https://upload.wikimedia.org/wikipedia/commons/d/d2/Insulating_the_Parsonage_Roof_%28bd62c9a7-9bdb-41de-8402-f6c4c35a81a5%29.jpg
+
+/images/team/crew-action.jpg
+    title:  File:CSIRO ScienceImage 2175 Installing Insul
+    source: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/CSIRO_ScienceImage_2175_Installing_Insulation_Batts.jpg/1920px-CSIRO_ScienceImage_2175_Installing_Insulation_Batts.jpg
+
+/images/textures/sprayfoam-closeup.jpg
+    title:  File:Application of insulation at 44th Street
+    source: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Application_of_insulation_at_44th_Street_in_the_future_LIRR_Passenger_Corridor._%28CM014B%2C_5-7-2018%29_%2842198296981%29.jpg/1920px-Application_of_insulation_at_44th_Street_in_the_future_LIRR_Passenger_Corridor._%28CM014B%2C_5-7-2018%29_%2842198296981%29.jpg
+
+/images/textures/batt-rolls.jpg
+    title:  File:Arrangement Mineralwolle.jpeg
+    source: https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Arrangement_Mineralwolle.jpeg/1920px-Arrangement_Mineralwolle.jpeg

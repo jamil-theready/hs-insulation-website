@@ -4,14 +4,14 @@
 // new extension here. One line per slot, nothing else to touch.
 
 export const media = {
-  heroPrimary: "/images/hero/hero-attic-sprayfoam.svg",
+  heroPrimary: "/images/hero/hero-attic-sprayfoam.jpg",
   heroTruck: "/images/hero/hero-truck.svg",
-  atticBefore: "/images/before-after/attic-before.svg",
-  atticAfter: "/images/before-after/attic-after.svg",
-  finishedBeauty: "/images/services/finished-beauty.svg",
-  crew: "/images/team/crew-action.svg",
-  textureFoam: "/images/textures/sprayfoam-closeup.svg",
-  textureBatt: "/images/textures/batt-rolls.svg",
+  atticBefore: "/images/before-after/attic-before.jpg",
+  atticAfter: "/images/before-after/attic-after.jpg",
+  finishedBeauty: "/images/services/finished-beauty.jpg",
+  crew: "/images/team/crew-action.jpg",
+  textureFoam: "/images/textures/sprayfoam-closeup.jpg",
+  textureBatt: "/images/textures/batt-rolls.jpg",
   og: "/images/og/og-image.png",
 } as const;
 

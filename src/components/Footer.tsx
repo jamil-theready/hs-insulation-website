@@ -17,18 +17,18 @@ export default function Footer() {
             Free, no-pressure estimates across {site.region}. We&apos;ll tell you honestly what your home needs, in English or Spanish.
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-graphite transition-transform hover:-translate-y-0.5"
+            >
+              Get a Free Estimate
+            </Link>
             <a
               href={site.phoneHref}
-              className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-graphite transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center rounded-full border border-white/60 px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
             >
               Call {site.phone}
             </a>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full border border-white/60 px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
-            >
-              Request an Estimate
-            </Link>
           </div>
         </div>
       </div>

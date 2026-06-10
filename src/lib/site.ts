@@ -54,7 +54,7 @@ export const services: Service[] = [
     short: "Spray Foam",
     blurb:
       "High-performance closed- and open-cell spray foam that seals air leaks and insulates in one step, the gold standard for energy efficiency.",
-    image: "/images/services/spray-foam.svg",
+    image: "/images/services/spray-foam.jpg",
     bestFor: "Attics, walls, rim joists, and crawl spaces where air sealing matters most.",
     benefits: [
       "Air-seals and insulates in a single application",
@@ -79,7 +79,7 @@ export const services: Service[] = [
     short: "Blown-In",
     blurb:
       "Fast, even attic coverage with blown-in cellulose or fiberglass, the most cost-effective way to bring an older attic up to today's energy standards.",
-    image: "/images/services/blown-in.svg",
+    image: "/images/services/blown-in.jpg",
     bestFor: "Attic floors, hard-to-reach cavities, and topping up thin existing insulation.",
     benefits: [
       "Even coverage with no gaps or seams",
@@ -104,7 +104,7 @@ export const services: Service[] = [
     short: "Batt",
     blurb:
       "Precision-fit fiberglass and mineral wool batts for walls, floors, and new construction, reliable R-value installed the right way.",
-    image: "/images/services/batt.svg",
+    image: "/images/services/batt.jpg",
     bestFor: "Open walls, new construction, garages, and between-floor sound control.",
     benefits: [
       "Cost-effective for open wall cavities",
@@ -129,7 +129,7 @@ export const services: Service[] = [
     short: "Vacuum Removal",
     blurb:
       "Complete vacuum removal of old, damaged, or contaminated insulation, a clean slate before we install new, so you're not trapping rodents, mold, or dust in your attic.",
-    image: "/images/services/vacuum-removal.svg",
+    image: "/images/services/vacuum-removal.jpg",
     bestFor: "Attics with pest damage, water damage, mold, or decades-old settled insulation.",
     benefits: [
       "Removes rodent-soiled or water-damaged material",

@@ -4,7 +4,7 @@ description: "A plain-language comparison of the three most common insulation ty
 date: "2026-06-09"
 author: "Heradio Hernandez"
 category: "Insulation 101"
-cover: "/images/services/spray-foam.svg"
+cover: "/images/services/spray-foam.jpg"
 ---
 
 ## Quick answer
