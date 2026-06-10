@@ -4,7 +4,7 @@ export const site = {
   brand: "H&S Insulation",
   legalName: "New Vision",
   tagline: "NorCal insulation, done clean.",
-  since: "2020",
+  since: "2016",
   region: "Northern California",
   baseCity: "Yuba City",
   state: "CA",
@@ -277,7 +277,7 @@ export const serviceAreas: ServiceArea[] = [
 ];
 
 export const trustPoints = [
-  { stat: "Since 2020", label: "Serving NorCal homeowners" },
+  { stat: "Since 2016", label: "Serving NorCal homeowners" },
   { stat: "4 services", label: "Spray foam, blown-in, batt & removal" },
   { stat: "EN / ES", label: "English & Spanish, every step" },
   { stat: "Free", label: "No-pressure estimates" },

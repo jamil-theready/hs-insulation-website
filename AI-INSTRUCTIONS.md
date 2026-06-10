@@ -28,7 +28,7 @@ npm run build        # static export -> /out (runs prebuild SEO generators first
 - **Location**: Yuba City, CA 95991 (service-area business, no storefront)
 - **Hours**: Monday to Saturday, 7 AM to 6 PM
 - **Languages**: English and Spanish (key selling point)
-- **Since**: 2020
+- **Since**: 2016
 
 ### Services (4) - `src/lib/site.ts` -> services[]
 Spray Foam, Blown-In, Batt, Old Insulation Removal (+ air sealing). Pages at `/services/[slug]`.

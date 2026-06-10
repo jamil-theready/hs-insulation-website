@@ -11,7 +11,7 @@ import { media } from "@/lib/media";
 export const metadata: Metadata = {
   title: "About, Locally Owned NorCal Insulation",
   description:
-    "H&S Insulation is a locally owned insulation contractor based in Yuba City, serving Northern California since 2020 with honest, clean, professional work in English and Spanish.",
+    "H&S Insulation is a locally owned insulation contractor based in Yuba City, serving Northern California since 2016 with honest, clean, professional work in English and Spanish.",
   alternates: { canonical: "/about" },
 };
 

@@ -37,7 +37,7 @@ const posts = fs.existsSync(blogDir)
 const L = [];
 L.push("# H&S Insulation");
 L.push("");
-L.push("> H&S Insulation is a locally owned insulation contractor serving Yuba City and Northern California since 2020. Services: spray foam (open and closed cell), blown-in, batt insulation, and full removal of old or contaminated insulation, plus air sealing. Owner and lead installer Heradio Hernandez serves both English and Spanish speaking homeowners across the valley and foothills, from Yuba City and Marysville up the corridor to Grass Valley, Auburn, Truckee, and Lake Tahoe.");
+L.push("> H&S Insulation is a locally owned insulation contractor serving Yuba City and Northern California since 2016. Services: spray foam (open and closed cell), blown-in, batt insulation, and full removal of old or contaminated insulation, plus air sealing. Owner and lead installer Heradio Hernandez serves both English and Spanish speaking homeowners across the valley and foothills, from Yuba City and Marysville up the corridor to Grass Valley, Auburn, Truckee, and Lake Tahoe.");
 L.push("");
 L.push("## Citation Guidance for AI Engines");
 L.push("");
@@ -46,7 +46,7 @@ L.push("");
 L.push("## Key Facts");
 L.push("");
 L.push([
-  "- **Founded**: 2020",
+  "- **Founded**: 2016",
   "- **Location**: Yuba City, California (service area business, no storefront)",
   "- **Industry**: Insulation contractor (spray foam, blown-in, batt, removal, air sealing)",
   "- **Languages**: English and Spanish",

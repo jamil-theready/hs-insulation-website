@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | H&S Insulation",
   },
   description:
-    "Locally owned insulation contractor serving Yuba City, Marysville, and Northern California since 2020. Spray foam, blown-in, batt insulation, and old insulation removal. Free estimates, English & Spanish.",
+    "Locally owned insulation contractor serving Yuba City, Marysville, and Northern California since 2016. Spray foam, blown-in, batt insulation, and old insulation removal. Free estimates, English & Spanish.",
   keywords: [
     "insulation contractor Yuba City",
     "spray foam insulation",

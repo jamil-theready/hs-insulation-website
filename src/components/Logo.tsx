@@ -42,7 +42,7 @@ export default function Logo({ variant = "dark", withWordmark = true, className 
             H&amp;S INSULATION
           </span>
           <span className={`mt-0.5 text-[0.55rem] font-semibold uppercase tracking-[0.28em] ${sub}`}>
-            NorCal · Since 2020
+            NorCal · Since 2016
           </span>
         </span>
       )}
