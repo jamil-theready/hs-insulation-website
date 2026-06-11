@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: jamil-theready/hs-insulation
+  repo: jamil-theready/hs-insulation-website
   branch: main
 
 media_folder: "public/images/blog/library"
@@ -9,7 +9,7 @@ public_folder: "/images/blog/library"
 collections:
   - name: "blog"
     label: "Blog Posts"
-    folder: "src/content/blog"
+    folder: "content/blog"
     create: true
     slug: "{{slug}}"
     fields:
