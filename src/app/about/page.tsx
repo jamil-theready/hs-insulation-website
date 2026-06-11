@@ -55,7 +55,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="relative">
-              <Media src={media.crew} alt="H&S Insulation crew at work" className="aspect-[4/5]" priority />
+              <Media src={media.finishedBeauty} alt="Fresh insulation installed by H&S Insulation" className="aspect-[4/5]" priority />
               <div className="absolute -bottom-5 -left-5 hidden rounded-2xl border border-line bg-white p-5 shadow-lift sm:block">
                 <LogoIcon className="h-10 w-10" />
                 <p className="mt-2 font-display text-sm font-bold text-graphite">Since {site.since}</p>
@@ -66,7 +66,64 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ===== MEET HERADIO ===== */}
       <section className="bg-cream-2 py-20 sm:py-24">
+        <div className="container-x grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+          <Reveal className="lg:col-span-5">
+            <div className="relative">
+              <Media src={media.crew} alt={`${site.owner} and the H&S Insulation crew on the job`} className="aspect-[4/5]" />
+              <div className="absolute inset-x-4 bottom-4 flex items-center gap-3 rounded-2xl bg-white/95 p-4 shadow-lift backdrop-blur">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-soft">
+                  <LogoIcon className="h-7 w-7" />
+                </div>
+                <div>
+                  <p className="font-display font-bold text-graphite">{site.owner}</p>
+                  <p className="text-xs text-muted">Owner &amp; Lead Installer</p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1} className="lg:col-span-7">
+            <div>
+              <Eyebrow>Meet the owner</Eyebrow>
+              <h2 className="font-display mt-4 text-3xl font-extrabold text-graphite sm:text-4xl">
+                Meet Heradio
+              </h2>
+              {/* NOTE: drafted from known facts. Confirm/personalize with Heradio's real
+                  story + a real headshot (swap media.crew). The pull quote is a draft for his approval. */}
+              <div className="mt-5 space-y-4 text-lg leading-relaxed text-[#4a4d51]">
+                <p>
+                  H&amp;S Insulation isn&apos;t a faceless company with a call center. When you reach out, you&apos;re talking to {site.owner}, the owner who has been on the tools since he founded the company in {site.since}.
+                </p>
+                <p>
+                  Heradio works hands-on on every job, up in the attics and crawl spaces, because he believes the only way to insulate a home right is to see the problem with his own eyes. He built H&amp;S on a simple promise: tell homeowners the truth, recommend only what the home actually needs, and leave every job site cleaner than he found it.
+                </p>
+                <p>
+                  As a bilingual contractor, Heradio takes pride in serving both English- and Spanish-speaking families across the valley and foothills, walking every homeowner through their options in the language they&apos;re most comfortable with.
+                </p>
+              </div>
+
+              <blockquote className="mt-7 border-l-4 border-orange pl-5">
+                <p className="font-display text-xl font-bold leading-snug text-graphite">
+                  &ldquo;I treat every home like it&apos;s my own. That&apos;s the whole job.&rdquo;
+                </p>
+                <cite className="mt-2 block text-sm not-italic text-muted">{site.owner}, Owner</cite>
+              </blockquote>
+
+              <div className="mt-7 flex flex-wrap gap-2">
+                {[`Owner-operator since ${site.since}`, "Hands-on every job", "English & Spanish", `Based in ${site.baseCity}`].map((c) => (
+                  <span key={c} className="rounded-full border border-line bg-white px-4 py-1.5 text-sm font-medium text-graphite">
+                    {c}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="py-20 sm:py-24">
         <div className="container-x">
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
