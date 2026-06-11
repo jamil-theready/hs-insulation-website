@@ -23,7 +23,7 @@ export const site = {
     instagram: "",
   },
   gaId: "G-XXXXXXXXXX", // TODO: replace with real GA4 ID
-  web3formsKey: "YOUR_ACCESS_KEY", // TODO: replace with real Web3Forms access key
+  web3formsKey: "bdb2d9e6-25fb-4dea-8560-867b380c25b5",
   formRouteEmail: "jamil@thereadyconsult.com", // forms route to TRC, then forward to client
 };
 
