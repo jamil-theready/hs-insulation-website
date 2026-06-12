@@ -29,12 +29,12 @@ Replace with real photos to remove any attribution obligation.
     source: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Application_of_insulation_at_44th_Street_in_the_future_LIRR_Passenger_Corridor._%28CM014B%2C_5-7-2018%29_%2842198296981%29.jpg/1920px-Application_of_insulation_at_44th_Street_in_the_future_LIRR_Passenger_Corridor._%28CM014B%2C_5-7-2018%29_%2842198296981%29.jpg
 
 /images/before-after/attic-before.jpg
-    title:  Paper Wasp Condo
-    source: https://live.staticflickr.com/2326/2233513025_f86f0e4d09_b.jpg
+    title:  AI-generated (Gemini), 2026-06-12 — same attic scene as attic-after, old settled insulation
+    source: generated for H&S Insulation; no attribution required
 
 /images/before-after/attic-after.jpg
-    title:  File:Insulating the Parsonage Roof (bd62c9a7-
-    source: https://upload.wikimedia.org/wikipedia/commons/d/d2/Insulating_the_Parsonage_Roof_%28bd62c9a7-9bdb-41de-8402-f6c4c35a81a5%29.jpg
+    title:  AI-generated (Gemini), 2026-06-12 — same attic scene as attic-before, fresh blown-in insulation
+    source: generated for H&S Insulation; no attribution required
 
 /images/team/crew-action.jpg
     title:  File:CSIRO ScienceImage 2175 Installing Insul

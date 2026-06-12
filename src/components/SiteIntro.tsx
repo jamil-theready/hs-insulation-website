@@ -14,6 +14,8 @@ import { media } from "@/lib/media";
  */
 
 const SEEN_KEY = "hs-intro-seen";
+// Cut point tuned to the current 10s hero-insulation clip (cuts before the
+// loop seam); retune if the video in media.heroVideo is swapped or re-encoded.
 const INTRO_MS = 4600;
 
 export default function SiteIntro() {
@@ -22,10 +24,13 @@ export default function SiteIntro() {
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduced || sessionStorage.getItem(SEEN_KEY)) return;
-    sessionStorage.setItem(SEEN_KEY, "1");
-    // rAF defers the setState out of the effect body (no cascading render)
-    // and lets the opacity fade-in transition actually play.
-    const raf = requestAnimationFrame(() => setShow(true));
+    // rAF defers the setState out of the effect body (no cascading render).
+    // SEEN_KEY is written inside the callback so a StrictMode double-invoke
+    // (or an aborted mount) doesn't mark the intro seen before it ever shows.
+    const raf = requestAnimationFrame(() => {
+      sessionStorage.setItem(SEEN_KEY, "1");
+      setShow(true);
+    });
     const t = setTimeout(() => setShow(false), INTRO_MS);
     return () => {
       cancelAnimationFrame(raf);
@@ -36,8 +41,14 @@ export default function SiteIntro() {
   useEffect(() => {
     if (!show) return;
     document.body.style.overflow = "hidden";
+    // Keyboard users must be able to skip the scroll-locked overlay (WCAG 2.1.1).
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape" || e.key === "Enter" || e.key === " ") setShow(false);
+    };
+    window.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
     };
   }, [show]);
 

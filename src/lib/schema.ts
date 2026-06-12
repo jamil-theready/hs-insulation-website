@@ -1,4 +1,5 @@
 import { site, services, serviceAreas } from "./site";
+import { media } from "./media";
 
 const areaServed = serviceAreas.map((a) => ({
   "@type": "City",
@@ -16,7 +17,7 @@ export function localBusinessSchema() {
     url: site.url,
     telephone: site.phone,
     email: site.email,
-    image: `${site.url}/images/og/og-image.jpg`,
+    image: `${site.url}${media.og}`,
     priceRange: "$$",
     foundingDate: site.since,
     knowsLanguage: ["en", "es"],

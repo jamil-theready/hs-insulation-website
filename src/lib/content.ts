@@ -69,7 +69,11 @@ export function getPost(slug: string): Post | null {
     if (depth === 2) toc.push({ id, text });
     return `<h${depth} id="${id}">${text}</h${depth}>`;
   };
-  const html = marked.parse(content, { renderer, async: false }) as string;
+  // Wrap tables in a scroll container so wide comparison tables swipe
+  // horizontally on phones while keeping real <table> display + semantics.
+  const html = (marked.parse(content, { renderer, async: false }) as string)
+    .replaceAll("<table>", '<div class="table-scroll"><table>')
+    .replaceAll("</table>", "</table></div>");
 
   return {
     slug,

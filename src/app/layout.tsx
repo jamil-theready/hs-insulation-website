@@ -8,6 +8,7 @@ import FloatingPhoneCTA from "@/components/FloatingPhoneCTA";
 import JsonLd from "@/components/JsonLd";
 import { localBusinessSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
+import { media } from "@/lib/media";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,13 +47,13 @@ export const metadata: Metadata = {
     title: "H&S Insulation, NorCal Insulation, Done Clean",
     description:
       "Spray foam, blown-in, batt insulation, and old insulation removal across Yuba City and Northern California. Free estimates, English & Spanish.",
-    images: [{ url: "/images/og/og-image.jpg", width: 1200, height: 630, alt: "H&S Insulation" }],
+    images: [{ url: media.og, width: 1200, height: 630, alt: "H&S Insulation" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "H&S Insulation, NorCal Insulation, Done Clean",
     description: "Spray foam, blown-in, batt & insulation removal across Northern California. Free estimates.",
-    images: ["/images/og/og-image.jpg"],
+    images: [media.og],
   },
   robots: { index: true, follow: true },
 };

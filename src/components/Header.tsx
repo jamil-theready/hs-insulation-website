@@ -20,6 +20,14 @@ export default function Header() {
 
   const closeMenu = () => setOpen(false);
 
+  // Close the menu on ANY route change (logo tap, back/forward, desktop nav),
+  // using the render-time adjustment pattern instead of a setState-in-effect.
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
+    setOpen(false);
+  }
+
   return (
     <>
       {/* Top utility bar */}

@@ -39,7 +39,8 @@ export default function BeforeAfter({ before, after }: { before: string; after: 
 
   return (
     <div ref={ref} className="relative h-[300vh]">
-      <div className="sticky top-0 h-svh w-full overflow-hidden bg-graphite">
+      {/* h-dvh tracks the live viewport so no strip shows when the mobile URL bar collapses */}
+      <div className="sticky top-0 h-dvh w-full overflow-hidden bg-graphite">
         {/* BEFORE — full bleed */}
         <Image src={before} alt="Attic before new insulation" fill sizes="100vw" className="object-cover" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-ink/30" />
