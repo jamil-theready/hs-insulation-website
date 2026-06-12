@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { media } from "@/lib/media";
 
 /**
  * Hero background.
- * - Drop a looping 3D insulation animation at /videos/hero-insulation.mp4
- *   (and optionally .webm) and it plays automatically as the background.
+ * - To enable a looping background video, drop files in /public/videos and set
+ *   `media.heroVideo` in src/lib/media.ts (e.g. { mp4: "/videos/hero-insulation.mp4" }).
  * - Until then, the `poster` image shows, with animated insulation waves +
  *   drifting dust particles so the hero feels alive and cinematic.
  */
@@ -27,7 +28,7 @@ const PARTICLES = [
   { l: 92, s: 2, d: 10, dur: 21 },
 ];
 
-function WaveLayer({ ys, width, opacity, dur, op }: { ys: number[]; width: number; opacity: number; dur: number; op: number }) {
+function WaveLayer({ ys, width, dur, op }: { ys: number[]; width: number; dur: number; op: number }) {
   return (
     <motion.svg
       className="absolute inset-x-0 top-1/2 w-[200%] -translate-y-1/2"
@@ -55,22 +56,34 @@ function WaveLayer({ ys, width, opacity, dur, op }: { ys: number[]; width: numbe
 export default function HeroMedia({ poster }: { poster: string }) {
   return (
     <div className="absolute inset-0 overflow-hidden bg-ink">
-      {/* Drop-in background video (poster shows until the file exists) */}
-      <motion.video
-        className="absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        loop
-        muted
-        playsInline
-        poster={poster}
-        aria-hidden="true"
-        initial={{ scale: 1.08 }}
-        animate={{ scale: 1.16 }}
-        transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-      >
-        <source src="/videos/hero-insulation.webm" type="video/webm" />
-        <source src="/videos/hero-insulation.mp4" type="video/mp4" />
-      </motion.video>
+      {/* Drop-in background video (poster image until media.heroVideo is set) */}
+      {media.heroVideo ? (
+        <motion.video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={poster}
+          aria-hidden="true"
+          initial={{ scale: 1.08 }}
+          animate={{ scale: 1.16 }}
+          transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+        >
+          {media.heroVideo.webm && <source src={media.heroVideo.webm} type="video/webm" />}
+          {media.heroVideo.mp4 && <source src={media.heroVideo.mp4} type="video/mp4" />}
+        </motion.video>
+      ) : (
+        <motion.img
+          src={poster}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+          initial={{ scale: 1.08 }}
+          animate={{ scale: 1.16 }}
+          transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+        />
+      )}
 
       {/* Pulsing warm glow (worklight feel) */}
       <motion.div
@@ -82,9 +95,9 @@ export default function HeroMedia({ poster }: { poster: string }) {
 
       {/* Flowing insulation waves, three parallax layers */}
       <div className="pointer-events-none absolute inset-0">
-        <WaveLayer ys={[140, 240, 340, 440]} width={3.5} dur={20} op={0.32} opacity={0.32} />
-        <WaveLayer ys={[90, 190, 290, 390, 490]} width={2.5} dur={32} op={0.2} opacity={0.2} />
-        <WaveLayer ys={[60, 200, 360, 520]} width={2} dur={46} op={0.12} opacity={0.12} />
+        <WaveLayer ys={[140, 240, 340, 440]} width={3.5} dur={20} op={0.32} />
+        <WaveLayer ys={[90, 190, 290, 390, 490]} width={2.5} dur={32} op={0.2} />
+        <WaveLayer ys={[60, 200, 360, 520]} width={2} dur={46} op={0.12} />
       </div>
 
       {/* Drifting dust particles */}
@@ -101,10 +114,11 @@ export default function HeroMedia({ poster }: { poster: string }) {
         ))}
       </div>
 
-      {/* Darker overlay so the headline pops and the media stays moody */}
-      <div className="absolute inset-0 bg-ink/45" />
-      <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/55" />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/40" />
+      {/* Overlay: strong on the left for headline contrast, lighter on the
+          right so the video footage actually reads */}
+      <div className="absolute inset-0 bg-ink/25" />
+      <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/30" />
     </div>
   );
 }

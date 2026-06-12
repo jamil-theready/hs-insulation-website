@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import HeroMedia from "@/components/HeroMedia";
+import SiteIntro from "@/components/SiteIntro";
 import BeforeAfter from "@/components/BeforeAfter";
 import Media from "@/components/Media";
 import CTASection from "@/components/CTASection";
@@ -29,10 +30,11 @@ export default function Home() {
   return (
     <>
       <JsonLd data={faqSchema(faqs)} />
+      <SiteIntro />
 
       {/* ===== HERO ===== */}
       <section className="relative flex min-h-[88vh] items-center overflow-hidden bg-ink">
-        <HeroMedia poster={media.heroPrimary} />
+        <HeroMedia poster={media.heroVideoPoster} />
         <div className="container-x relative grid w-full items-center gap-10 py-20 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <Reveal>
@@ -132,9 +134,9 @@ export default function Home() {
       </section>
 
       {/* ===== BEFORE / AFTER ===== */}
-      <section className="overflow-hidden bg-cream-2 py-20 sm:py-28">
-        <div className="container-x grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-          <Reveal className="lg:col-span-5">
+      <section className="bg-cream-2">
+        <div className="container-x grid gap-10 py-20 sm:py-24 lg:grid-cols-12 lg:gap-16">
+          <Reveal className="lg:col-span-6">
             <div>
               <Eyebrow>The difference</Eyebrow>
               <h2 className="font-display mt-4 text-3xl font-extrabold text-graphite sm:text-4xl">
@@ -143,7 +145,11 @@ export default function Home() {
               <p className="mt-4 text-lg text-[#4a4d51]">
                 Too many attics are stuffed with thin, settled, or rodent-damaged insulation. We remove what&apos;s failing, seal the gaps underneath, and install fresh material that actually performs.
               </p>
-              <ul className="mt-6 space-y-3">
+            </div>
+          </Reveal>
+          <Reveal delay={0.1} className="lg:col-span-6 lg:pt-12">
+            <div>
+              <ul className="space-y-3">
                 {["Full vacuum removal of old material", "Air sealing the hidden gaps", "Even, modern R-value coverage", "Sealed disposal, no mess left behind"].map((t) => (
                   <li key={t} className="flex items-center gap-3 text-[#3a3d41]">
                     <span className="flex h-6 w-6 items-center justify-center rounded-full bg-orange-soft text-orange-dark">
@@ -158,10 +164,9 @@ export default function Home() {
               </div>
             </div>
           </Reveal>
-          <Reveal delay={0.1} className="lg:col-span-7">
-            <BeforeAfter before={media.atticBefore} after={media.atticAfter} />
-          </Reveal>
         </div>
+        {/* full-screen scroll-driven before/after wipe */}
+        <BeforeAfter before={media.atticBefore} after={media.atticAfter} />
       </section>
 
       {/* ===== PROCESS ===== */}

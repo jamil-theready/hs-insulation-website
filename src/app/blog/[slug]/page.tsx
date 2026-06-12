@@ -84,8 +84,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               </div>
             </div>
 
-            {/* CENTER: article */}
-            <div className="lg:col-span-8">
+            {/* CENTER: article (min-w-0 lets the prose table scroll instead of stretching the grid) */}
+            <div className="min-w-0 lg:col-span-8">
               <Media src={post.cover} alt={post.title} className="aspect-[16/9]" priority />
               {/* Byline */}
               <div className="mt-6 flex items-center gap-3">

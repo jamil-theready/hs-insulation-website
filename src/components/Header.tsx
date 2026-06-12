@@ -18,9 +18,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
+  const closeMenu = () => setOpen(false);
 
   return (
     <>
@@ -97,6 +95,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={closeMenu}
                 className="border-b border-line/60 py-3 text-base font-medium text-graphite last:border-0 hover:text-orange"
               >
                 {item.label}
@@ -104,6 +103,7 @@ export default function Header() {
             ))}
             <a
               href={site.phoneHref}
+              onClick={closeMenu}
               className="mt-4 inline-flex justify-center rounded-full bg-orange px-5 py-3 text-sm font-semibold text-white"
             >
               Call {site.phone}

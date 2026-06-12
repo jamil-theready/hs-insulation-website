@@ -5,6 +5,14 @@
 
 export const media = {
   heroPrimary: "/images/hero/hero-attic-sprayfoam.jpg",
+  // First frame of /videos/hero-insulation.mp4 — keeps the video load seamless.
+  heroVideoPoster: "/images/hero/video-poster.jpg",
+  // Looping hero background video (watermark-free, muted, ~1 MB each).
+  // Set to null to fall back to the poster image without 404ing.
+  heroVideo: {
+    webm: "/videos/hero-insulation.webm",
+    mp4: "/videos/hero-insulation.mp4",
+  } as { webm?: string; mp4?: string } | null,
   heroTruck: "/images/hero/hero-truck.svg",
   atticBefore: "/images/before-after/attic-before.jpg",
   atticAfter: "/images/before-after/attic-after.jpg",
@@ -12,7 +20,7 @@ export const media = {
   crew: "/images/team/crew-action.jpg",
   textureFoam: "/images/textures/sprayfoam-closeup.jpg",
   textureBatt: "/images/textures/batt-rolls.jpg",
-  og: "/images/og/og-image.png",
+  og: "/images/og/og-image.jpg",
 } as const;
 
 // Whether the photo slots are still branded placeholders (true) or real photos.

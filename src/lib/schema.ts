@@ -16,7 +16,7 @@ export function localBusinessSchema() {
     url: site.url,
     telephone: site.phone,
     email: site.email,
-    image: `${site.url}/images/og/og-image.png`,
+    image: `${site.url}/images/og/og-image.jpg`,
     priceRange: "$$",
     foundingDate: site.since,
     knowsLanguage: ["en", "es"],
