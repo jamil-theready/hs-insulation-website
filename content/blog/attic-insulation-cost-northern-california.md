@@ -17,12 +17,12 @@ As of 2026, most Northern California homeowners pay **between $1,500 and $4,500 
 
 | Insulation type | Typical cost (avg. attic) | Best for |
 | --- | --- | --- |
-| Blown-in (cellulose/fiberglass) | $1,500 to $3,000 | Attic floors, top-ups |
-| Batt (fiberglass/mineral wool) | $1,500 to $3,500 | Accessible, open framing |
-| Closed-cell spray foam | $3,000 to $7,000+ | Air sealing, high R-value |
-| Old insulation removal (add-on) | $1,000 to $2,500 | Damaged/contaminated attics |
+| [Blown-in](/services/blown-in-insulation) (cellulose/fiberglass) | $1,500 to $3,000 | Attic floors, top-ups |
+| [Batt](/services/batt-insulation) (fiberglass/mineral wool) | $1,500 to $3,500 | Accessible, open framing |
+| Closed-cell [spray foam](/services/spray-foam-insulation) | $3,000 to $7,000+ | Air sealing, high R-value |
+| Old insulation [removal](/services/insulation-removal) (add-on) | $1,000 to $2,500 | Damaged/contaminated attics |
 
-These reflect typical single-family homes in the Yuba City, Marysville, and foothill areas. Larger homes, steep roofs, and difficult access push costs higher.
+These reflect typical single-family homes in the [Yuba City](/service-areas/yuba-city), Marysville, and foothill areas. Larger homes, steep roofs, and difficult access push costs higher. For a deeper look at spray foam specifically, see our [Yuba City spray foam cost breakdown](/blog/spray-foam-insulation-yuba-city-cost).
 
 ## What actually drives your price
 
@@ -67,4 +67,4 @@ If it's damaged, settled, or pest-contaminated, we recommend full removal first,
 **How long does an attic job take?**
 Most residential attics are done in a single day. Removals and larger homes can take longer.
 
-Want a real number for your home? [Request a free estimate](/contact), we serve Yuba City, Marysville, and up the corridor to Tahoe.
+Not sure which insulation type fits your home? See our [spray foam vs. blown-in vs. batt](/blog/spray-foam-vs-blown-in-vs-batt) comparison, then [request a free estimate](/contact). We serve Yuba City, Marysville, and up the corridor to Tahoe.

@@ -9,7 +9,7 @@ import JsonLd from "@/components/JsonLd";
 import { ArrowRight } from "@/components/ui";
 import Image from "next/image";
 import { getPost, getPostSlugs, getAllPostsMeta, formatDate } from "@/lib/content";
-import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { authorByName } from "@/lib/authors";
 import { site } from "@/lib/site";
 
@@ -61,6 +61,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             { name: "Blog", url: `${site.url}/blog` },
             { name: post.title, url: `${site.url}/blog/${post.slug}` },
           ]),
+          ...(post.faqs.length > 0 ? [faqSchema(post.faqs.map((f) => ({ q: f.q, a: f.a })))] : []),
         ]}
       />
       <PageHero

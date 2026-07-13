@@ -7,7 +7,7 @@ import Media from "@/components/Media";
 import CTASection from "@/components/CTASection";
 import JsonLd from "@/components/JsonLd";
 import { ArrowRight } from "@/components/ui";
-import { services, serviceBySlug, site } from "@/lib/site";
+import { services, serviceBySlug, serviceAreas, site } from "@/lib/site";
 import { serviceSchema, breadcrumbSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
@@ -119,6 +119,21 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
               <Link key={o.slug} href={`/services/${o.slug}`} className="group flex items-center justify-between rounded-2xl border border-line bg-white p-5 shadow-card transition-all hover:-translate-y-1 hover:shadow-lift">
                 <span className="font-display font-bold text-graphite group-hover:text-orange-dark">{o.name}</span>
                 <ArrowRight className="text-muted transition-transform group-hover:translate-x-1 group-hover:text-orange" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Where we do this work */}
+      <section className="py-16">
+        <div className="container-x">
+          <h2 className="font-display text-2xl font-bold text-graphite">Where we install {s.short.toLowerCase()}</h2>
+          <p className="mt-2 text-[#4a4d51]">We bring {s.short.toLowerCase()} to homeowners across the valley and up the corridor to the mountains.</p>
+          <div className="mt-6 flex flex-wrap gap-2.5">
+            {serviceAreas.map((a) => (
+              <Link key={a.slug} href={`/service-areas/${a.slug}`} className="rounded-full border border-line bg-cream-2 px-4 py-2 text-sm font-medium text-graphite transition-colors hover:border-orange hover:text-orange-dark">
+                {a.city}
               </Link>
             ))}
           </div>

@@ -16,7 +16,9 @@ export type PostMeta = {
   readingTime: number;
 };
 
-export type Post = PostMeta & { html: string; toc: { id: string; text: string }[] };
+export type PostFaq = { q: string; a: string };
+
+export type Post = PostMeta & { html: string; toc: { id: string; text: string }[]; faqs: PostFaq[] };
 
 function slugify(text: string) {
   return text
@@ -24,6 +26,30 @@ function slugify(text: string) {
     .replace(/[^\w\s-]/g, "")
     .trim()
     .replace(/\s+/g, "-");
+}
+
+// Parses a "## Frequently asked questions" (or "## FAQ") section out of the raw
+// markdown body into structured Q/A pairs, so every post's FAQ content can
+// double as FAQPage JSON-LD without a separate authoring step.
+function extractFaqs(markdown: string): PostFaq[] {
+  const sectionMatch = markdown.match(/^##\s+(?:Frequently [Aa]sked [Qq]uestions|FAQs?)\s*$/m);
+  if (!sectionMatch) return [];
+
+  const start = sectionMatch.index! + sectionMatch[0].length;
+  const rest = markdown.slice(start);
+  const nextHeading = rest.search(/\n##\s+/);
+  const block = nextHeading === -1 ? rest : rest.slice(0, nextHeading);
+
+  const faqs: PostFaq[] = [];
+  const paragraphs = block.split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+  for (const p of paragraphs) {
+    const m = p.match(/^\*\*(.+?)\*\*\s*\n([\s\S]+)$/);
+    if (!m) continue;
+    const q = m[1].trim();
+    const a = m[2].replace(/\s+/g, " ").trim();
+    if (q && a) faqs.push({ q, a });
+  }
+  return faqs;
 }
 
 function listFiles(): string[] {
@@ -86,6 +112,7 @@ export function getPost(slug: string): Post | null {
     readingTime: Math.max(1, Math.round(words / 200)),
     html,
     toc,
+    faqs: extractFaqs(content),
   };
 }
 

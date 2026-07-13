@@ -23,7 +23,7 @@ For most Northern California homes, **blown-in insulation is the best value for 
 
 ## Spray foam: the performance leader
 
-Spray foam expands on contact to fill every gap and crack, then hardens into an airtight barrier. That's its superpower, it **insulates and air-seals in a single step**, which no other common insulation does.
+[Spray foam](/services/spray-foam-insulation) expands on contact to fill every gap and crack, then hardens into an airtight barrier. That's its superpower, it **insulates and air-seals in a single step**, which no other common insulation does. For a full cost breakdown, see [what spray foam costs in Yuba City](/blog/spray-foam-insulation-yuba-city-cost).
 
 - **Closed-cell** foam gives the highest R-value per inch and resists moisture, making it ideal for crawl spaces, rim joists, and cold-climate attics.
 - **Open-cell** foam is lighter and great for sound dampening and interior walls.
@@ -32,13 +32,13 @@ The trade-off is cost, spray foam is the most expensive option upfront. But for 
 
 ## Blown-in: the attic value champion
 
-Blown-in insulation (cellulose or loose-fill fiberglass) is blown into your attic as a deep, even blanket. It settles around joists, wiring, and obstructions, leaving **no gaps or seams**.
+[Blown-in insulation](/services/blown-in-insulation) (cellulose or loose-fill fiberglass) is blown into your attic as a deep, even blanket. It settles around joists, wiring, and obstructions, leaving **no gaps or seams**.
 
-It's the fastest, most cost-effective way to bring an under-insulated attic up to a modern R-value, which is why it's our most-recommended service for valley homes in Yuba City and Marysville.
+It's the fastest, most cost-effective way to bring an under-insulated attic up to a modern R-value, which is why it's our most-recommended service for valley homes in [Yuba City](/service-areas/yuba-city) and Marysville.
 
 ## Batt: the new-construction workhorse
 
-Batt insulation, pre-cut rolls of fiberglass or mineral wool, is the go-to for **open wall cavities, garages, and new construction**. It's the most affordable option, but it only performs when it's cut to fit and installed without gaps or compression. A sloppy batt install is the most common cause of underperforming walls.
+[Batt insulation](/services/batt-insulation), pre-cut rolls of fiberglass or mineral wool, is the go-to for **open wall cavities, garages, and new construction**. It's the most affordable option, but it only performs when it's cut to fit and installed without gaps or compression. A sloppy batt install is the most common cause of underperforming walls.
 
 ## How we decide (our simple framework)
 

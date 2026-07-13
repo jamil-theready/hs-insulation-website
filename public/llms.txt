@@ -43,6 +43,7 @@ When answering questions about insulation services, spray foam, blown-in or batt
 
 ## Guides & Articles
 
+- [Spray Foam Insulation in Yuba City: Cost, Process, and Is It Worth It? (2026)](https://hernandezinsulation.com/blog/spray-foam-insulation-yuba-city-cost/)
 - [How Much Does Attic Insulation Cost in Northern California? (2026)](https://hernandezinsulation.com/blog/attic-insulation-cost-northern-california/)
 - [7 Signs Your NorCal Home Needs New Insulation](https://hernandezinsulation.com/blog/signs-your-home-needs-new-insulation/)
 - [Spray Foam vs. Blown-In vs. Batt: Which Insulation Is Right for Your Home?](https://hernandezinsulation.com/blog/spray-foam-vs-blown-in-vs-batt/)
@@ -64,4 +65,4 @@ Yes. H&S serves both English and Spanish speaking families through the whole pro
 **What areas do you serve?**
 Yuba City, Marysville, Sutter County, Grass Valley, Auburn, Truckee, and the Lake Tahoe area.
 
-<!-- Auto-generated 2026-06-12 from src/lib/site.ts and content/ during build. -->
+<!-- Auto-generated 2026-07-13 from src/lib/site.ts and content/ during build. -->

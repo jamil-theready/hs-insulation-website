@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-12T23:02:20.931Z",
-  "totalEntries": 14,
+  "generatedAt": "2026-07-13T20:11:10.752Z",
+  "totalEntries": 15,
   "totalServices": 4,
   "totalAreas": 7,
-  "totalBlogPosts": 3,
+  "totalBlogPosts": 4,
   "byCluster": {
     "sprayFoam": [
       {
@@ -12,6 +12,12 @@
         "title": "Spray Foam Insulation",
         "url": "/services/spray-foam-insulation/",
         "type": "service"
+      },
+      {
+        "slug": "spray-foam-insulation-yuba-city-cost",
+        "title": "Spray Foam Insulation in Yuba City: Cost, Process, and Is It Worth It? (2026)",
+        "url": "/blog/spray-foam-insulation-yuba-city-cost/",
+        "type": "blog"
       },
       {
         "slug": "spray-foam-vs-blown-in-vs-batt",
@@ -196,6 +202,13 @@
       "title": "7 Signs Your NorCal Home Needs New Insulation",
       "url": "/blog/signs-your-home-needs-new-insulation/",
       "cluster": "comfort"
+    },
+    {
+      "type": "blog",
+      "slug": "spray-foam-insulation-yuba-city-cost",
+      "title": "Spray Foam Insulation in Yuba City: Cost, Process, and Is It Worth It? (2026)",
+      "url": "/blog/spray-foam-insulation-yuba-city-cost/",
+      "cluster": "sprayFoam"
     },
     {
       "type": "blog",
