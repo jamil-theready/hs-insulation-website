@@ -1,18 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { site, services } from "@/lib/site";
+
+const HCAPTCHA_SITEKEY = "50b2fe65-b00b-4b9e-ad62-3ba471098be2";
 
 export default function ContactForm() {
   const router = useRouter();
   const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
+  const hcaptchaRef = useRef<HCaptcha>(null);
+  const formDataRef = useRef<FormData | null>(null);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("sending");
-    const form = e.currentTarget;
-    const data = new FormData(form);
+    formDataRef.current = new FormData(e.currentTarget);
+    hcaptchaRef.current?.execute();
+  }
+
+  async function handleVerify(token: string) {
+    const data = formDataRef.current;
+    if (!data) return;
+    data.append("h-captcha-response", token);
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
@@ -27,6 +38,8 @@ export default function ContactForm() {
       }
     } catch {
       setStatus("error");
+    } finally {
+      hcaptchaRef.current?.resetCaptcha();
     }
   }
 
@@ -78,6 +91,16 @@ export default function ContactForm() {
         <label className="mb-1.5 block text-sm font-medium text-graphite">How can we help?</label>
         <textarea name="message" rows={4} placeholder="Tell us about your home and what you're noticing…" className={inputCls} />
       </div>
+
+      <HCaptcha
+        sitekey={HCAPTCHA_SITEKEY}
+        size="invisible"
+        reCaptchaCompat={false}
+        onVerify={handleVerify}
+        onError={() => setStatus("error")}
+        onExpire={() => setStatus("idle")}
+        ref={hcaptchaRef}
+      />
 
       <button
         type="submit"
