@@ -32,6 +32,15 @@ export default function ContactForm() {
       });
       const json = await res.json();
       if (json.success) {
+        // GA4 lead conversion — fire before redirecting to /thank-you
+        const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+        if (typeof gtag === "function") {
+          gtag("event", "generate_lead", {
+            form: "contact",
+            service: (data.get("service") as string) || "unspecified",
+            city: (data.get("city") as string) || "unspecified",
+          });
+        }
         router.push("/thank-you");
       } else {
         setStatus("error");
