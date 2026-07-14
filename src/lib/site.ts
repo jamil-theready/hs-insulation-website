@@ -22,7 +22,7 @@ export const site = {
     facebook: "",
     instagram: "",
   },
-  gaId: "G-XXXXXXXXXX", // TODO: replace with real GA4 ID
+  gaId: "G-BLCRRYQW9W", // GA4 Measurement ID (H&S data stream, set 2026-07-14)
   web3formsKey: "bdb2d9e6-25fb-4dea-8560-867b380c25b5",
   formRouteEmail: "jamil@thereadyconsult.com", // forms route to TRC, then forward to client
 };
