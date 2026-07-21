@@ -17,6 +17,9 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus("sending");
     formDataRef.current = new FormData(e.currentTarget);
+    // Lead attribution: source page + referrer
+    formDataRef.current.append("lead_page", window.location.pathname);
+    formDataRef.current.append("lead_referrer", document.referrer || "direct");
     hcaptchaRef.current?.execute();
   }
 
