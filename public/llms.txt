@@ -65,4 +65,4 @@ Yes. H&S serves both English and Spanish speaking families through the whole pro
 **What areas do you serve?**
 Yuba City, Marysville, Sutter County, Grass Valley, Auburn, Truckee, and the Lake Tahoe area.
 
-<!-- Auto-generated 2026-07-13 from src/lib/site.ts and content/ during build. -->
+<!-- Auto-generated 2026-07-28 from src/lib/site.ts and content/ during build. -->

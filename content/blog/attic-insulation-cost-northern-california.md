@@ -1,6 +1,6 @@
 ---
 title: "How Much Does Attic Insulation Cost in Northern California? (2026)"
-description: "A clear breakdown of what attic insulation costs in the Yuba City and NorCal area in 2026, by insulation type, attic size, and whether old material needs removal."
+description: "A clear breakdown of what attic insulation costs in Yuba City and NorCal in 2026, by insulation type, attic size, and whether old material needs removal."
 date: "2026-06-09"
 author: "Heradio Hernandez"
 category: "Cost & Value"

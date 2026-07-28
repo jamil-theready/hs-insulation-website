@@ -9,7 +9,7 @@ import { serviceAreas, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Service Areas, Insulation Across Northern California",
   description:
-    "H&S Insulation serves Yuba City, Marysville, Sutter County, Grass Valley, Auburn, Truckee, and the Lake Tahoe area. Find your city and request a free estimate.",
+    "H&S Insulation serves Yuba City, Marysville, Sutter County, Grass Valley, Auburn, Truckee, and Lake Tahoe. Find your city, request a free estimate.",
   alternates: { canonical: "/service-areas" },
 };
 

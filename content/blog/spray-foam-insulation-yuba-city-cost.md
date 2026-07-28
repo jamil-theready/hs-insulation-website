@@ -1,6 +1,6 @@
 ---
 title: "Spray Foam Insulation in Yuba City: Cost, Process, and Is It Worth It? (2026)"
-description: "What spray foam insulation costs in Yuba City in 2026, open-cell vs closed-cell for our valley climate, what the install day looks like, and whether it's worth the extra cost."
+description: "What spray foam insulation costs in Yuba City in 2026, open-cell vs closed-cell, what install day looks like, and whether it's worth the cost."
 date: "2026-07-13"
 author: "Heradio Hernandez"
 category: "Cost & Value"

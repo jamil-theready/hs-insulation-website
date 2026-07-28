@@ -1,6 +1,6 @@
 ---
 title: "Spray Foam vs. Blown-In vs. Batt: Which Insulation Is Right for Your Home?"
-description: "A plain-language comparison of the three most common insulation types, spray foam, blown-in, and batt, so you can choose the right one for your attic, walls, and budget."
+description: "A plain-language comparison of spray foam, blown-in, and batt insulation, so you can choose the right one for your attic, walls, and budget."
 date: "2026-06-09"
 author: "Heradio Hernandez"
 category: "Insulation 101"

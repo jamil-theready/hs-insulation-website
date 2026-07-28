@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!s) return {};
   return {
     title: `${s.name} in NorCal`,
-    description: s.blurb,
+    description: s.blurb.length > 155 ? `${s.blurb.slice(0, 152).replace(/\s+\S*$/, "")}...` : s.blurb,
     alternates: { canonical: `/services/${s.slug}` },
   };
 }

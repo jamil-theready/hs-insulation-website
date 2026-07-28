@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact, Free Insulation Estimate",
   description:
-    "Request a free, no-pressure insulation estimate from H&S Insulation. Serving Yuba City and Northern California. Call or fill out the form, English & Spanish.",
+    "Request a free, no-pressure insulation estimate from H&S Insulation. Serving Yuba City and Northern California, in English and Spanish.",
   alternates: { canonical: "/contact" },
 };
 

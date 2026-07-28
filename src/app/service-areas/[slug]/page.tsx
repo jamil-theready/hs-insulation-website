@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!a) return {};
   return {
     title: `Insulation in ${a.city}, CA`,
-    description: `Spray foam, blown-in, batt insulation and removal in ${a.city}${a.county ? `, ${a.county}` : ""}. ${a.note} Free estimates from H&S Insulation.`,
+    description: `Spray foam, blown-in, batt insulation and removal in ${a.city}${a.county ? `, ${a.county}` : ""}. ${a.note} Free estimates.`,
     alternates: { canonical: `/service-areas/${a.slug}` },
   };
 }
