@@ -1,7 +1,9 @@
 import Link from "next/link";
+import CookieSettingsLink from "@/components/CookieSettingsLink";
 import Logo from "./Logo";
 import { WaveTick } from "./ui";
 import { site, services, serviceAreas } from "@/lib/site";
+import TrcCredit from "@/components/TrcCredit";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -63,7 +65,9 @@ export default function Footer() {
           <div className="flex items-center gap-5">
             <Link href="/privacy-policy" className="hover:text-orange">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-orange">Terms</Link>
+            <CookieSettingsLink className="hover:text-orange" />
           </div>
+          <TrcCredit className="text-cream" />
         </div>
       </div>
     </footer>

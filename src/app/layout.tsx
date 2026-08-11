@@ -6,9 +6,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingPhoneCTA from "@/components/FloatingPhoneCTA";
 import JsonLd from "@/components/JsonLd";
+import CookieConsent from "@/components/CookieConsent";
 import { localBusinessSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 import { media } from "@/lib/media";
+import { consentBootstrap } from "@/lib/consent";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -61,6 +63,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} ${zilla.variable} h-full`}>
+      <head>
+        {/* Consent Mode v2 defaults. A raw head script, not next/script: an inline
+            beforeInteractive Script is serialised into the RSC payload and only runs
+            at hydration, which lets the GA4 tag fire ahead of the defaults. */}
+        {site.gaId && site.gaId !== "G-XXXXXXXXXX" && (
+          <script dangerouslySetInnerHTML={{ __html: consentBootstrap() }} />
+        )}
+      </head>
       <body className="flex min-h-full flex-col bg-white antialiased">
         <JsonLd data={localBusinessSchema()} />
         {site.gaId && site.gaId !== "G-XXXXXXXXXX" && (
@@ -78,6 +88,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <main className="flex-1">{children}</main>
         <Footer />
         <FloatingPhoneCTA />
+        <CookieConsent />
       </body>
     </html>
   );

@@ -33,6 +33,13 @@ export default function PrivacyPage() {
           <p>
             We may share information with trusted service providers who help us operate our website and communicate with you (for example, our form and email providers). These providers are only permitted to use your information to perform services for us.
           </p>
+          <h2>Cookies and analytics</h2>
+          <p>
+            We use Google Analytics to understand how visitors find and use this site, such as which pages are viewed and which services people are looking for. It sets cookies that record a randomly generated identifier for your browser. We do not use advertising or cross-site tracking cookies, and we do not sell your personal information.
+          </p>
+          <p>
+            You can accept or decline analytics cookies using the banner shown on your first visit, and you can change that choice at any time with the <strong>Cookie Settings</strong> link in the footer of any page. If you decline, we stop analytics collection and remove the analytics cookies already stored in your browser. Visitors in the EU, UK, and Switzerland have analytics disabled by default until they choose to accept.
+          </p>
           <h2>Your choices</h2>
           <p>
             You may request that we update or delete your information at any time by contacting us at{" "}
