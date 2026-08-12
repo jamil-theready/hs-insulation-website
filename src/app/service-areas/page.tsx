@@ -7,7 +7,7 @@ import { ArrowRight } from "@/components/ui";
 import { serviceAreas, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Service Areas, Insulation Across Northern California",
+  title: "Service Areas in Northern California",
   description:
     "H&S Insulation serves Yuba City, Marysville, Sutter County, Grass Valley, Auburn, Truckee, and Lake Tahoe. Find your city, request a free estimate.",
   alternates: { canonical: "/service-areas" },

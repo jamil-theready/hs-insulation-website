@@ -27,11 +27,11 @@ const zilla = Zilla_Slab({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "H&S Insulation, Spray Foam, Blown-In & Batt Insulation in NorCal",
+    default: "Insulation Contractor in Yuba City, CA | H&S Insulation",
     template: "%s | H&S Insulation",
   },
   description:
-    "Locally owned insulation contractor serving Yuba City, Marysville, and Northern California since 2016. Spray foam, blown-in, batt insulation, and old insulation removal. Free estimates, English & Spanish.",
+    "Locally owned insulation contractor in Yuba City since 2016. Spray foam, blown-in and batt insulation, plus removal. Free estimates, English & Spanish.",
   keywords: [
     "insulation contractor Yuba City",
     "spray foam insulation",
