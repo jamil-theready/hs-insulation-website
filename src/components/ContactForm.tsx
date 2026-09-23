@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { site, services } from "@/lib/site";
+import { appendLeadAttribution } from "@/lib/lead-attribution";
 
 const HCAPTCHA_SITEKEY = "50b2fe65-b00b-4b9e-ad62-3ba471098be2";
 
@@ -17,6 +18,7 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus("sending");
     formDataRef.current = new FormData(e.currentTarget);
+    appendLeadAttribution(formDataRef.current, "contact_form");
     // Lead attribution: source page + referrer
     formDataRef.current.append("lead_page", window.location.pathname);
     formDataRef.current.append("lead_referrer", document.referrer || "direct");
@@ -114,6 +116,10 @@ export default function ContactForm() {
         ref={hcaptchaRef}
       />
 
+      <div>
+        <label htmlFor="how_heard" className="mb-1 block text-sm font-medium text-dark">How did you hear about us? <span className="font-normal">(optional)</span></label>
+        <select id="how_heard" name="how_heard" className="w-full rounded-lg border border-dark/20 bg-white px-4 py-3 text-dark"><option value="">Select one</option><option>Google Search or Maps</option><option>Google ad</option><option>Facebook or Instagram</option><option>Friend or referral</option><option>Other</option></select>
+      </div>
       <button
         type="submit"
         disabled={status === "sending"}
