@@ -5,12 +5,12 @@ import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
 
 export default function FloatingPhoneCTA() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   useEffect(() => {
     const onScroll = () => {
       const nearBottom = window.innerHeight + window.scrollY > document.body.offsetHeight - 600;
-      setShow(window.scrollY > 400 && !nearBottom);
+      setShow(!nearBottom);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -24,18 +24,16 @@ export default function FloatingPhoneCTA() {
     >
       <Link
         href="/contact"
-        className="flex flex-1 items-center justify-center gap-2 rounded-full bg-orange px-6 py-3.5 text-sm font-semibold text-white shadow-lift"
+        className="flex h-12 flex-1 items-center justify-center rounded-full bg-orange px-3 text-center text-sm font-semibold text-white shadow-lift"
       >
         Get a Free Estimate
       </Link>
       <a
         href={site.phoneHref}
         aria-label={`Call ${site.phone}`}
-        className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-graphite text-white shadow-lift"
+        className="flex h-12 flex-1 items-center justify-center rounded-full bg-white px-3 text-center text-sm font-semibold text-graphite shadow-lift"
       >
-        <svg viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
-          <path d="M2 3.5A1.5 1.5 0 013.5 2h1.7a1.5 1.5 0 011.46 1.15l.6 2.4a1.5 1.5 0 01-.4 1.43l-1 1a11 11 0 004.66 4.66l1-1a1.5 1.5 0 011.43-.4l2.4.6A1.5 1.5 0 0118 13.3V15a1.5 1.5 0 01-1.5 1.5C8.49 16.5 3.5 11.51 3.5 3.5z" />
-        </svg>
+        Call {site.phone}
       </a>
     </div>
   );

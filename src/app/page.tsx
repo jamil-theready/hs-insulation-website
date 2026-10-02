@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import HeroMedia from "@/components/HeroMedia";
-import SiteIntro from "@/components/SiteIntro";
 import BeforeAfter from "@/components/BeforeAfter";
 import Media from "@/components/Media";
 import CTASection from "@/components/CTASection";
 import FAQAccordion from "@/components/FAQAccordion";
 import JsonLd from "@/components/JsonLd";
 import { LogoIcon } from "@/components/Logo";
+import ContactForm from "@/components/ContactForm";
 import { Button, Eyebrow, WaveTick, ArrowRight } from "@/components/ui";
 import { site, services, serviceAreas, trustPoints } from "@/lib/site";
 import { media } from "@/lib/media";
@@ -30,38 +30,27 @@ export default function Home() {
   return (
     <>
       <JsonLd data={faqSchema(faqs)} />
-      <SiteIntro />
-
       {/* ===== HERO ===== */}
-      <section className="relative flex min-h-[88vh] items-center overflow-hidden bg-ink">
+      <section className="relative isolate overflow-hidden border-b border-graphite bg-graphite">
         <HeroMedia poster={media.heroVideoPoster} />
-        <div className="container-x relative grid w-full items-center gap-10 py-20 lg:grid-cols-12">
-          <div className="lg:col-span-7">
-            <Reveal>
-              <Eyebrow light>NorCal Insulation · Since {site.since}</Eyebrow>
+        <div className="container-x relative grid min-h-[calc(100svh-104px)] items-center gap-8 py-10 lg:grid-cols-12 lg:gap-12 lg:py-8">
+          <div className="max-w-2xl py-4 lg:col-span-7">
+            <Reveal immediate>
+              <Eyebrow light>Yuba City · Northern California</Eyebrow>
             </Reveal>
-            <Reveal delay={0.05}>
-              <h1 className="font-display mt-5 text-4xl font-extrabold leading-[1.05] text-cream sm:text-5xl lg:text-6xl">
-                A more comfortable home,{" "}
-                <span className="text-orange">sealed tight</span> and done clean.
+            <Reveal immediate>
+              <h1 className="font-display mt-4 text-4xl font-extrabold leading-[1.02] tracking-tight text-white sm:text-5xl lg:text-[4.25rem]">
+                Insulation for a more comfortable <span className="text-orange">Yuba City home.</span>
               </h1>
             </Reveal>
-            <Reveal delay={0.1}>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/75">
-                Spray foam, blown-in, and batt insulation, plus full removal of old, contaminated material. Serving {site.baseCity}, Marysville, and the foothills up to Tahoe.
+            <Reveal immediate>
+              <p className="mt-5 hidden max-w-xl text-lg leading-relaxed text-white/80 sm:block">
+                Spray foam, blown-in, and batt insulation, plus clean removal of old material. Straight answers and a written estimate for homes across Yuba City, Marysville, and the foothills.
               </p>
             </Reveal>
-            <Reveal delay={0.15}>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Button href="/contact">Get a Free Estimate</Button>
-                <Button href={site.phoneHref} variant="outline-light">
-                  Call {site.phone}
-                </Button>
-              </div>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-cream/60">
-                <span className="flex items-center gap-2"><WaveTick className="text-orange" /> Free, no-pressure estimates</span>
+            <Reveal immediate>
+              <div className="mt-7 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-white/75">
+                <span className="flex items-center gap-2"><WaveTick className="text-orange" /> Free written estimates</span>
                 <span className="flex items-center gap-2"><WaveTick className="text-orange" /> English &amp; Spanish</span>
                 <span className="flex items-center gap-2"><WaveTick className="text-orange" /> Locally owned</span>
               </div>
@@ -69,18 +58,16 @@ export default function Home() {
           </div>
 
           <div className="hidden lg:col-span-5 lg:block">
-            <Reveal delay={0.15}>
-              <div className="ml-auto max-w-xs border-l border-white/15 pl-7">
-                <LogoIcon variant="light" className="h-12 w-12" />
-                <p className="mt-5 font-display text-lg font-bold text-cream">Why homeowners call us first</p>
-                <ul className="mt-4 space-y-3 text-sm text-cream/70">
-                  {["We show you the real problem in your attic", "The right product for each space, no upsells", "A clean job site, every single time"].map((t) => (
-                    <li key={t} className="flex gap-3">
-                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-orange" />
-                      {t}
-                    </li>
-                  ))}
-                </ul>
+            <Reveal immediate>
+              <div className="ml-auto max-w-md rounded-2xl border border-white/80 bg-[#f6f1e8] p-5 shadow-lift">
+                <div className="flex items-center gap-3">
+                  <LogoIcon className="h-10 w-10" />
+                  <div>
+                    <p className="font-display text-lg font-bold text-graphite">Start with a free estimate</p>
+                    <p className="text-xs text-muted">Tell us about your home. We&apos;ll follow up to schedule a visit.</p>
+                  </div>
+                </div>
+                <div className="mt-4 border-t border-line pt-4"><ContactForm compact /></div>
               </div>
             </Reveal>
           </div>

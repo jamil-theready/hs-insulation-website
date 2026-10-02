@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Zilla_Slab } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -12,14 +12,20 @@ import { site } from "@/lib/site";
 import { media } from "@/lib/media";
 import { consentBootstrap } from "@/lib/consent";
 
-const inter = Inter({
-  subsets: ["latin"],
+// These are the existing production font subsets packaged locally so builds do
+// not require a runtime request to Google Fonts.
+const inter = localFont({
+  src: "../../public/fonts/inter-latin.woff2",
   variable: "--font-inter",
   display: "swap",
+  weight: "100 900",
 });
-const zilla = Zilla_Slab({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
+const zilla = localFont({
+  src: [
+    { path: "../../public/fonts/zilla-slab-500-latin.woff2", weight: "500" },
+    { path: "../../public/fonts/zilla-slab-600-latin.woff2", weight: "600" },
+    { path: "../../public/fonts/zilla-slab-700-latin.woff2", weight: "700" },
+  ],
   variable: "--font-zilla",
   display: "swap",
 });

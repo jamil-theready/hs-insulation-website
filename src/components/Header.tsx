@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
 import { nav, site } from "@/lib/site";
@@ -9,7 +9,9 @@ import { nav, site } from "@/lib/site";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
   const pathname = usePathname();
+  const homeHero = pathname === "/" && !scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -19,6 +21,31 @@ export default function Header() {
   }, []);
 
   const closeMenu = () => setOpen(false);
+
+  useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closeMenu();
+        menuButtonRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
+
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 1024) closeMenu();
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   // Close the menu on ANY route change (logo tap, back/forward, desktop nav),
   // using the render-time adjustment pattern instead of a setState-in-effect.
@@ -45,12 +72,12 @@ export default function Header() {
       {/* Main nav */}
       <header
         className={`sticky top-0 z-50 border-b transition-all duration-300 ${
-          scrolled ? "border-line bg-white/95 backdrop-blur shadow-sm" : "border-transparent bg-white"
+          scrolled ? "border-line bg-white/95 backdrop-blur shadow-sm" : homeHero ? "border-white/10 bg-graphite text-white" : "border-transparent bg-white"
         }`}
       >
         <div className="container-x flex h-[68px] items-center justify-between">
           <Link href="/" aria-label="H&S Insulation home">
-            <Logo />
+            <Logo variant={homeHero ? "light" : "dark"} />
           </Link>
 
           <nav className="hidden items-center gap-7 lg:flex">
@@ -61,7 +88,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   className={`text-sm font-medium transition-colors ${
-                    active ? "text-orange" : "text-graphite hover:text-orange"
+                    active ? "text-orange" : homeHero ? "text-white hover:text-orange" : "text-graphite hover:text-orange"
                   }`}
                 >
                   {item.label}
@@ -73,7 +100,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden rounded-full bg-orange px-5 py-2.5 text-sm font-semibold text-white shadow-card transition-all hover:bg-orange-dark hover:-translate-y-0.5 sm:inline-flex"
+              className="hidden rounded-full bg-orange px-5 py-2.5 text-sm font-semibold text-white shadow-card transition-all hover:bg-orange-dark hover:-translate-y-0.5 lg:inline-flex"
             >
               Get a Free Estimate
             </Link>
@@ -81,19 +108,22 @@ export default function Header() {
             {/* Hamburger */}
             <button
               onClick={() => setOpen((v) => !v)}
+              ref={menuButtonRef}
               aria-label="Toggle menu"
               aria-expanded={open}
+              aria-controls="mobile-navigation"
               className="flex h-10 w-10 flex-col items-center justify-center gap-[5px] lg:hidden"
             >
-              <span className={`h-0.5 w-6 bg-graphite transition-all ${open ? "translate-y-[7px] rotate-45" : ""}`} />
-              <span className={`h-0.5 w-6 bg-graphite transition-all ${open ? "opacity-0" : ""}`} />
-              <span className={`h-0.5 w-6 bg-graphite transition-all ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
+              <span className={`h-0.5 w-6 ${homeHero ? "bg-white" : "bg-graphite"} transition-all ${open ? "translate-y-[7px] rotate-45" : ""}`} />
+              <span className={`h-0.5 w-6 ${homeHero ? "bg-white" : "bg-graphite"} transition-all ${open ? "opacity-0" : ""}`} />
+              <span className={`h-0.5 w-6 ${homeHero ? "bg-white" : "bg-graphite"} transition-all ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
             </button>
           </div>
         </div>
 
         {/* Mobile menu */}
         <div
+          id="mobile-navigation"
           className={`overflow-hidden border-t border-line bg-white transition-all duration-300 lg:hidden ${
             open ? "max-h-[26rem]" : "max-h-0"
           }`}

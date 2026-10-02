@@ -23,12 +23,18 @@ const COPY = {
 
 export default function CookieConsent() {
   const [open, setOpen] = useState(false);
-  const [blocking, setBlocking] = useState(false);
+  const [blocking, setBlocking] = useState(
+    () => typeof window !== "undefined" && isEuLikeTimezone(),
+  );
   const acceptRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    setBlocking(isEuLikeTimezone());
-    if (!readConsent()) setOpen(true);
+    if (readConsent()) return;
+
+    // EU-like regions stay behind the stricter Consent Mode guard. Elsewhere, let
+    // people begin reading before presenting the lightweight choice prompt.
+    const delay = isEuLikeTimezone() ? 0 : 10_000;
+    const promptTimer = window.setTimeout(() => setOpen(true), delay);
 
     // Footer "Cookie Settings" reopens the banner for an existing choice.
     const reopen = () => {
@@ -36,7 +42,10 @@ export default function CookieConsent() {
       setOpen(true);
     };
     window.addEventListener(CONSENT_OPEN_EVENT, reopen);
-    return () => window.removeEventListener(CONSENT_OPEN_EVENT, reopen);
+    return () => {
+      window.clearTimeout(promptTimer);
+      window.removeEventListener(CONSENT_OPEN_EVENT, reopen);
+    };
   }, []);
 
   // Under a scrim the banner is the only thing on screen, so it takes focus.

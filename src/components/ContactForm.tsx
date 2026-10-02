@@ -8,7 +8,7 @@ import { appendLeadAttribution } from "@/lib/lead-attribution";
 
 const HCAPTCHA_SITEKEY = "50b2fe65-b00b-4b9e-ad62-3ba471098be2";
 
-export default function ContactForm() {
+export default function ContactForm({ compact = false }: { compact?: boolean }) {
   const router = useRouter();
   const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
   const hcaptchaRef = useRef<HCaptcha>(null);
@@ -57,40 +57,40 @@ export default function ContactForm() {
     }
   }
 
-  const inputCls =
-    "w-full rounded-xl border border-line bg-cream-2 px-4 py-3 text-graphite outline-none transition-colors placeholder:text-muted focus:border-orange focus:bg-white";
+  const inputCls = `w-full rounded-xl border border-line bg-cream-2 px-4 ${compact ? "py-2 text-sm" : "py-3"} text-graphite outline-none transition-colors placeholder:text-muted focus:border-orange focus:bg-white`;
+  const labelCls = compact ? "mb-1 block text-xs font-semibold text-graphite" : "mb-1.5 block text-sm font-medium text-graphite";
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className={compact ? "space-y-2.5" : "space-y-4"}>
       <input type="hidden" name="access_key" value={site.web3formsKey} />
       <input type="hidden" name="subject" value="New estimate request, H&S Insulation website" />
       <input type="hidden" name="from_name" value="H&S Insulation Website" />
       {/* Honeypot */}
       <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className={`grid ${compact ? "gap-2 sm:gap-3" : "gap-4"} sm:grid-cols-2`}>
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-graphite">Name</label>
+          <label className={labelCls}>Name</label>
           <input name="name" required placeholder="Your name" className={inputCls} />
         </div>
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-graphite">Phone</label>
+          <label className={labelCls}>Phone</label>
           <input name="phone" type="tel" required placeholder="(916) 000-0000" className={inputCls} />
         </div>
       </div>
 
       <div>
-        <label className="mb-1.5 block text-sm font-medium text-graphite">Email</label>
+        <label className={labelCls}>Email</label>
         <input name="email" type="email" required placeholder="you@email.com" className={inputCls} />
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className={`grid ${compact ? "gap-2 sm:gap-3" : "gap-4"} sm:grid-cols-2`}>
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-graphite">City</label>
+          <label className={labelCls}>City</label>
           <input name="city" placeholder="Yuba City, Marysville…" className={inputCls} />
         </div>
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-graphite">Service needed</label>
+          <label className={labelCls}>Service needed</label>
           <select name="service" className={inputCls} defaultValue="">
             <option value="" disabled>Select a service</option>
             {services.map((s) => (
@@ -102,8 +102,8 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="mb-1.5 block text-sm font-medium text-graphite">How can we help?</label>
-        <textarea name="message" rows={4} placeholder="Tell us about your home and what you're noticing…" className={inputCls} />
+        <label className={labelCls}>How can we help?</label>
+        <textarea name="message" rows={compact ? 2 : 4} placeholder="Tell us about your home and what you're noticing…" className={inputCls} />
       </div>
 
       <HCaptcha
@@ -117,15 +117,15 @@ export default function ContactForm() {
       />
 
       <div>
-        <label htmlFor="how_heard" className="mb-1 block text-sm font-medium text-dark">How did you hear about us? <span className="font-normal">(optional)</span></label>
-        <select id="how_heard" name="how_heard" className="w-full rounded-lg border border-dark/20 bg-white px-4 py-3 text-dark"><option value="">Select one</option><option>Google Search or Maps</option><option>Google ad</option><option>Facebook or Instagram</option><option>Friend or referral</option><option>Other</option></select>
+        <label htmlFor="how_heard" className={labelCls}>How did you hear about us? <span className="font-normal">(optional)</span></label>
+        <select id="how_heard" name="how_heard" className={`w-full rounded-lg border border-dark/20 bg-white px-4 ${compact ? "py-2 text-sm" : "py-3"} text-dark`}><option value="">Select one</option><option>Google Search or Maps</option><option>Google ad</option><option>Facebook or Instagram</option><option>Friend or referral</option><option>Other</option></select>
       </div>
       <button
         type="submit"
         disabled={status === "sending"}
-        className="inline-flex w-full items-center justify-center rounded-full bg-orange px-6 py-3.5 text-sm font-semibold text-white shadow-card transition-all hover:bg-orange-dark hover:-translate-y-0.5 disabled:opacity-60 sm:w-auto"
+        className={`inline-flex w-full items-center justify-center rounded-full bg-orange px-6 ${compact ? "py-2.5" : "py-3.5"} text-sm font-semibold text-white shadow-card transition-all hover:bg-orange-dark hover:-translate-y-0.5 disabled:opacity-60 sm:w-auto`}
       >
-        {status === "sending" ? "Sending…" : "Request My Free Estimate"}
+        {status === "sending" ? "Sending…" : "Get a Free Estimate"}
       </button>
 
       {status === "error" && (
