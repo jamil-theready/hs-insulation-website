@@ -39,12 +39,12 @@ export default function Home() {
               <Eyebrow light>Yuba City · Northern California</Eyebrow>
             </Reveal>
             <Reveal immediate>
-              <h1 className="font-display mt-4 text-3xl font-extrabold leading-[1.02] tracking-tight text-white sm:text-[2.8rem] lg:text-[3.875rem]">
+              <h1 className="font-display mt-4 max-w-[17ch] text-3xl font-extrabold leading-[1.02] tracking-tight text-[#fff8ed] sm:text-[2.8rem] lg:text-[3.875rem]">
                 Insulation for a more comfortable <span className="text-orange">Yuba City home.</span>
               </h1>
             </Reveal>
             <Reveal immediate>
-              <p className="mt-5 hidden max-w-xl text-base leading-relaxed text-white/80 sm:block">
+              <p className="mt-5 hidden max-w-[52ch] text-base leading-relaxed text-[#fff8ed]/80 sm:block">
                 Spray foam, blown-in, and batt insulation, plus clean removal of old material. Straight answers and a written estimate for homes across Yuba City, Marysville, and the foothills.
               </p>
             </Reveal>
